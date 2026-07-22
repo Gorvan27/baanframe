@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Shop — กรอบรูปพร้อมนาฬิกา รับสกรีนเสื้อ ราคาโรงงาน | Pattaya</title>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero{text-align:center;padding:56px 6% 36px;position:relative;overflow:hidden}
+.hero .hand-tag{display:inline-block;background:var(--peach);color:#b3705a;border-radius:30px;padding:7px 20px;font-size:14px;margin-bottom:20px;font-family:'Mali',cursive}
+.hero h1{font-size:42px;font-family:'Mali',cursive;font-weight:600;color:var(--rose-dark);line-height:1.3}
+.hero p{max-width:540px;margin:18px auto 28px;color:#8d7079}
+.deco{position:absolute;font-size:28px;opacity:.5}
+.d1{top:40px;left:12%}.d2{top:120px;right:14%}.d3{bottom:20px;left:20%}.d4{bottom:60px;right:22%}
+.polas{display:flex;justify-content:center;gap:26px;padding:26px 6% 6px;flex-wrap:wrap}
+.pola{background:#fff;padding:14px 14px 40px;box-shadow:0 14px 34px rgba(179,83,111,.16);transform:rotate(-3deg);transition:.25s;width:200px;text-decoration:none;color:var(--ink)}
+.pola:nth-child(2){transform:rotate(2deg)}
+.pola:nth-child(3){transform:rotate(-1deg)}
+.pola:nth-child(4){transform:rotate(3deg)}
+.pola:hover{transform:rotate(0) scale(1.05);z-index:2}
+.pola .ph{height:170px;display:flex;align-items:center;justify-content:center;font-size:52px}
+.pola .ph img{width:100%;height:100%;object-fit:cover}
+.pola:nth-child(1) .ph{background:linear-gradient(150deg,#E8A0B4,#D4728F)}
+.pola:nth-child(2) .ph{background:linear-gradient(150deg,#FFDFD0,#f5b99f)}
+.pola:nth-child(3) .ph{background:linear-gradient(150deg,#f3c3d2,#E8A0B4)}
+.pola:nth-child(4) .ph{background:linear-gradient(150deg,#D4728F,#B3536F)}
+.pola .cap{font-family:'Mali',cursive;text-align:center;margin-top:12px;font-size:14.5px;color:#8d7079}
+.banner{margin:0 6%;background:#fff;border-radius:30px;padding:46px 7%;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;box-shadow:0 16px 40px rgba(179,83,111,.12);border:2px dashed var(--rose)}
+.banner h2{font-family:'Mali',cursive;font-size:28px;color:var(--rose-dark);margin-bottom:12px;font-weight:600}
+.banner p{color:#8d7079;margin-bottom:22px}
+.banner .tag{display:inline-block;background:var(--rose-deep);color:#fff;border-radius:20px;padding:5px 16px;font-size:13px;margin-bottom:14px}
+.mock{background:var(--bg);border-radius:20px;padding:24px;text-align:center}
+.mock .up{border:2px dashed var(--rose);border-radius:14px;padding:26px;color:#c193a2;font-size:14px;background:#fff}
+.mock .row{display:flex;gap:10px;justify-content:center;margin-top:14px}
+@media(max-width:900px){.banner{grid-template-columns:1fr}.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">🎀 กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน · Factory prices, made in Pattaya</div>
+
+<header>
+  <a class="logo" href="index.html"><span class="heart">♥</span> DJ Shop<small>FRAME &amp; GIFT STUDIO</small></a>
+  <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  <nav id="nav">
+    <a href="index.html" class="active">หน้าแรก · Home</a>
+    <a href="shop.html">สินค้า · Shop</a>
+    <a href="studio.html">Design Studio ✨</a>
+    <a href="index.html#reviews">รีวิว</a>
+    <a href="index.html#contact">ติดต่อ</a>
+    <a class="cta" href="shop.html">สั่งทำเลย</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="deco d1">🌸</span><span class="deco d2">💕</span><span class="deco d3">🎀</span><span class="deco d4">🌷</span>
+  <div class="hand-tag">handmade with love in Pattaya 🧡</div>
+  <h1>เก็บทุกความทรงจำดี ๆ<br>ไว้ในกรอบเดียว</h1>
+  <p>Custom photo frames, clocks, mugs & tees — made just for you. กรอบรูป นาฬิกา แก้ว เสื้อสกรีน ราคาโรงงาน สั่งง่ายผ่าน LINE</p>
+  <a class="btn btn-primary" href="shop.html">ดูสินค้า · Shop</a>
+  <a class="btn btn-line" href="#" style="margin-left:10px">💬 สั่งผ่าน LINE</a>
+</section>
+
+<div class="polas">
+  <a class="pola" href="shop.html#frames"><div class="ph">🖼️</div><div class="cap">กรอบลอย · Floating frame</div></a>
+  <a class="pola" href="shop.html#clocks"><div class="ph">🕐</div><div class="cap">นาฬิกากรอบรูป · Clock</div></a>
+  <a class="pola" href="shop.html#mugs"><div class="ph">☕</div><div class="cap">แก้วสกรีน · Mug</div></a>
+  <a class="pola" href="shop.html#tees"><div class="ph">👕</div><div class="cap">เสื้อสกรีน · Tee</div></a>
+</div>
+
+<section class="section">
+  <h2>สินค้าขายดี</h2>
+  <div class="sub">BEST SELLERS — цены и фото добавим из вашего прайса</div>
+  <div class="cards">
+    <a class="card" href="shop.html#frames"><div class="img">🖼️<span class="badge">ขายดี 🔥</span></div><div class="body"><h3>กรอบลอยพรีเมียม</h3><div class="en">Floating Frame</div><p>ทุกขนาด พร้อมรูปของคุณ</p><span class="price">฿ —</span></div></a>
+    <a class="card" href="shop.html#clocks"><div class="img">🕐<span class="badge">ของขวัญยอดฮิต</span></div><div class="body"><h3>นาฬิกากรอบรูป</h3><div class="en">Frame Clock</div><p>ดีไซน์เฉพาะคุณ</p><span class="price">฿ —</span></div></a>
+    <a class="card" href="shop.html#mugs"><div class="img">☕</div><div class="body"><h3>แก้วสกรีน</h3><div class="en">Custom Mug</div><p>รูปและข้อความตามสั่ง</p><span class="price">฿ —</span></div></a>
+    <a class="card" href="shop.html#tees"><div class="img">👕</div><div class="body"><h3>เสื้อสกรีน</h3><div class="en">Custom Tee</div><p>คุณภาพดี ราคาโรงงาน</p><span class="price">฿ —</span></div></a>
+  </div>
+  <div style="text-align:center;margin-top:34px"><a class="btn btn-primary" href="shop.html">ดูสินค้าทั้งหมด · View all products</a></div>
+</section>
+
+<section class="banner">
+  <div>
+    <span class="tag">✨ ใหม่! Design Studio</span>
+    <h2>ออกแบบกรอบในแบบของคุณ</h2>
+    <p>อัปโหลดรูปของคุณ เลือกสไตล์กรอบและโทนสี เห็นตัวอย่างทันที — Upload your photo, pick a style & palette, preview instantly.</p>
+    <a class="btn btn-primary" href="studio.html">ลองออกแบบเลย · Try it</a>
+  </div>
+  <div class="mock">
+    <div class="up">📤 ลากรูปมาวางที่นี่<br>Drop your photo here</div>
+    <div class="row">
+      <div class="sw" style="background:#E8A0B4"></div>
+      <div class="sw" style="background:#D4728F"></div>
+      <div class="sw" style="background:#FFDFD0"></div>
+      <div class="sw" style="background:#B3536F"></div>
+      <div class="sw" style="background:#5C4048"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>สั่งง่าย ๆ แค่ 3 ขั้นตอน</h2>
+  <div class="sub">HOW TO ORDER</div>
+  <div class="steps">
+    <div class="step"><div class="ic">💬</div><h4>1. ทัก LINE ส่งรูป</h4><p>Send your photo via LINE / Facebook</p></div>
+    <div class="step"><div class="ic">🎨</div><h4>2. เลือกแบบ ยืนยันดีไซน์</h4><p>Choose style & confirm design</p></div>
+    <div class="step"><div class="ic">📦</div><h4>3. รับสินค้า</h4><p>Pickup in Pattaya or delivery nationwide</p></div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <h2>รีวิวจากลูกค้า</h2>
+  <div class="sub">จาก Google Maps — сюда вставим реальные отзывы</div>
+  <div class="gbadge"><span>Google</span><b>5.0</b><span class="stars">★★★★★</span><span>· รีวิวจริงจากลูกค้า</span></div>
+  <div class="reviews">
+    <div class="rev"><div class="stars">★★★★★</div><p>"[ отзыв с Google Maps №1 — вставим текст ]"</p><div class="who">— ชื่อลูกค้า</div><div class="src">รีวิวจาก Google Maps</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"[ отзыв с Google Maps №2 ]"</p><div class="who">— ชื่อลูกค้า</div><div class="src">รีวิวจาก Google Maps</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"[ отзыв с Google Maps №3 ]"</p><div class="who">— ชื่อลูกค้า</div><div class="src">รีวิวจาก Google Maps</div></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>มาหาเราได้เลย</h2>
+  <div class="sub">VISIT US · PATTAYA</div>
+  <div class="contact-grid">
+    <div class="cinfo">
+      <h3>DJ Shop</h3>
+      <div class="row"><span class="i">📍</span><span>113/69 หมู่13 เมืองพัทยา ตำบลหนองปรือ<br>อำเภอบางละมุง ชลบุรี 20150</span></div>
+      <div class="row"><span class="i">📞</span><span>094 342 7274</span></div>
+      <div class="row"><span class="i">✉️</span><span>danitaseenark@gmail.com</span></div>
+      <div class="row"><span class="i">🕐</span><span>เปิดทุกวัน · Open daily</span></div>
+      <div class="socials" style="margin-top:18px">
+        <a class="line" href="#">💬 LINE</a>
+        <a class="fb" href="https://www.facebook.com/share/19SeNPXHiD/" target="_blank">f Facebook</a>
+        <a class="tt" href="#">♪ TikTok</a>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=113%2F69%20%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%8813%20%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%AB%E0%B8%99%E0%B8%AD%E0%B8%87%E0%B8%9B%E0%B8%A3%E0%B8%B7%E0%B8%AD%20%E0%B8%AD%E0%B8%B3%E0%B9%80%E0%B8%A0%E0%B8%AD%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A5%E0%B8%B0%E0%B8%A1%E0%B8%B8%E0%B8%87%20%E0%B8%8A%E0%B8%A5%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5%2020150&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <div class="logo hand">♥ DJ Shop</div>
+      <p>113/69 หมู่13 เมืองพัทยา ตำบลหนองปรือ<br>อำเภอบางละมุง ชลบุรี 20150<br>📞 094 342 7274 · เปิดทุกวัน</p>
+    </div>
+    <div>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px">ติดตามเรา</p>
+      <div class="socials">
+        <a class="line" href="#">💬 LINE</a>
+        <a class="fb" href="https://www.facebook.com/share/19SeNPXHiD/" target="_blank">f Facebook</a>
+        <a class="tt" href="#">♪ TikTok</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px">เมนู</p>
+      <p><a href="shop.html" style="text-decoration:none">สินค้า · Shop</a><br><a href="studio.html" style="text-decoration:none">Design Studio</a><br><a href="index.html#contact" style="text-decoration:none">ติดต่อเรา</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 DJ Shop · Pattaya, Thailand</div>
+</footer>
+
+<a class="chat" href="#">💬 แชทกับเรา</a>
+
+</body>
+</html>

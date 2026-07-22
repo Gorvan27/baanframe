@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Studio ✨ — DJ Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">✨ Design Studio — ออกแบบกรอบของคุณเอง เห็นผลทันที</div>
+
+<header>
+  <a class="logo" href="index.html"><span class="heart">♥</span> DJ Shop<small>FRAME &amp; GIFT STUDIO</small></a>
+  <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  <nav id="nav">
+    <a href="index.html">หน้าแรก · Home</a>
+    <a href="shop.html">สินค้า · Shop</a>
+    <a href="studio.html" class="active">Design Studio ✨</a>
+    <a href="index.html#reviews">รีวิว</a>
+    <a href="index.html#contact">ติดต่อ</a>
+    <a class="cta" href="#">💬 LINE</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>ออกแบบกรอบในแบบของคุณ</h2>
+  <div class="sub">อัปโหลดรูป → เลือกกรอบและสี → เห็นตัวอย่างทันที · Upload, style, preview</div>
+
+  <div class="studio">
+    <div class="panel">
+      <h3>1. อัปโหลดรูปของคุณ</h3>
+      <label class="drop" id="drop">📤 แตะเพื่อเลือกรูป หรือลากมาวางที่นี่<br><span style="font-size:12.5px">Tap to choose a photo or drag & drop</span>
+        <input type="file" id="file" accept="image/*" hidden>
+      </label>
+
+      <div class="opt-title">2. เลือกสไตล์กรอบ · Frame style</div>
+      <div class="chipset" id="styles">
+        <button class="chip on" data-w="14" data-c="#B3536F">Classic Rose</button>
+        <button class="chip" data-w="10" data-c="#C9A86A">Gold</button>
+        <button class="chip" data-w="8"  data-c="#FFFFFF">White Minimal</button>
+        <button class="chip" data-w="16" data-c="#5C4048">Dark Wood</button>
+        <button class="chip" data-w="12" data-c="#E8A0B4">Sweet Pink</button>
+      </div>
+
+      <div class="opt-title">3. สีขอบใน (พาสปาร์ตู) · Mat color</div>
+      <div class="chipset" id="mats">
+        <div class="sw on" data-m="#FFFFFF" style="background:#FFFFFF"></div>
+        <div class="sw" data-m="#FFF6F1" style="background:#FFF6F1"></div>
+        <div class="sw" data-m="#FBE3EA" style="background:#FBE3EA"></div>
+        <div class="sw" data-m="#FFDFD0" style="background:#FFDFD0"></div>
+        <div class="sw" data-m="#F0E4D0" style="background:#F0E4D0"></div>
+      </div>
+
+      <div class="opt-title">4. ขนาด · Size</div>
+      <div class="chipset" id="sizes">
+        <button class="chip on">A4</button>
+        <button class="chip">A3</button>
+        <button class="chip">A2</button>
+        <button class="chip">50×70</button>
+        <button class="chip">สั่งขนาดพิเศษ</button>
+      </div>
+
+      <div style="margin-top:26px">
+        <a class="btn btn-line" href="#" id="send">💬 ส่งแบบนี้ให้ร้านทาง LINE</a>
+      </div>
+
+      <div class="ai-soon">🤖 <b>AI Studio — เร็ว ๆ นี้!</b><br>สร้างภาพสไตล์พิเศษด้วย AI (การ์ตูน สีน้ำ วินเทจ ฯลฯ) แล้วใส่กรอบได้เลย — ฟีเจอร์แรกในไทย</div>
+    </div>
+
+    <div class="panel">
+      <h3>ตัวอย่าง · Live preview</h3>
+      <div class="preview-area">
+        <div class="frame-preview" id="frame" style="border:14px solid #B3536F">
+          <div class="mat" id="mat" style="padding:18px;background:#FFFFFF">
+            <div class="ph" id="ph">🖼️<span>รูปของคุณจะแสดงที่นี่<br>Your photo appears here</span></div>
+            <img id="img" style="display:none" alt="preview">
+          </div>
+        </div>
+      </div>
+      <p style="font-size:13px;color:#c193a2;margin-top:14px;text-align:center">ตัวอย่างเบื้องต้น — ทีมงานจะยืนยันแบบจริงก่อนผลิตทุกครั้ง 💕</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <div class="logo hand">♥ DJ Shop</div>
+      <p>113/69 หมู่13 เมืองพัทยา ตำบลหนองปรือ<br>อำเภอบางละมุง ชลบุรี 20150<br>📞 094 342 7274 · เปิดทุกวัน</p>
+    </div>
+    <div>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px">ติดตามเรา</p>
+      <div class="socials">
+        <a class="line" href="#">💬 LINE</a>
+        <a class="fb" href="https://www.facebook.com/share/19SeNPXHiD/" target="_blank">f Facebook</a>
+        <a class="tt" href="#">♪ TikTok</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px">เมนู</p>
+      <p><a href="index.html" style="text-decoration:none">หน้าแรก</a><br><a href="shop.html" style="text-decoration:none">สินค้า</a><br><a href="index.html#contact" style="text-decoration:none">ติดต่อเรา</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 DJ Shop · Pattaya, Thailand</div>
+</footer>
+
+<script>
+const file=document.getElementById('file'),drop=document.getElementById('drop'),
+      img=document.getElementById('img'),ph=document.getElementById('ph'),
+      frame=document.getElementById('frame'),mat=document.getElementById('mat');
+
+function show(f){
+  if(!f||!f.type.startsWith('image/'))return;
+  const r=new FileReader();
+  r.onload=e=>{img.src=e.target.result;img.style.display='block';ph.style.display='none';};
+  r.readAsDataURL(f);
+}
+file.addEventListener('change',()=>show(file.files[0]));
+drop.addEventListener('dragover',e=>{e.preventDefault();drop.style.background='#fbe3ea';});
+drop.addEventListener('dragleave',()=>drop.style.background='');
+drop.addEventListener('drop',e=>{e.preventDefault();drop.style.background='';show(e.dataTransfer.files[0]);});
+
+document.querySelectorAll('#styles .chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('#styles .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');
+  frame.style.border=c.dataset.w+'px solid '+c.dataset.c;
+}));
+document.querySelectorAll('#mats .sw').forEach(s=>s.addEventListener('click',()=>{
+  document.querySelectorAll('#mats .sw').forEach(x=>x.classList.remove('on'));s.classList.add('on');
+  mat.style.background=s.dataset.m;
+}));
+document.querySelectorAll('#sizes .chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('#sizes .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');
+}));
+document.getElementById('send').addEventListener('click',e=>{
+  e.preventDefault();
+  alert('ในเวอร์ชันจริง: ระบบจะส่งรูป + สไตล์ + ขนาดที่เลือกไปที่ LINE ของร้านโดยอัตโนมัติ 💚');
+});
+</script>
+
+</body>
+</html>

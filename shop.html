@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สินค้า · Shop — DJ Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">🎀 กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน</div>
+
+<header>
+  <a class="logo" href="index.html"><span class="heart">♥</span> DJ Shop<small>FRAME &amp; GIFT STUDIO</small></a>
+  <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  <nav id="nav">
+    <a href="index.html">หน้าแรก · Home</a>
+    <a href="shop.html" class="active">สินค้า · Shop</a>
+    <a href="studio.html">Design Studio ✨</a>
+    <a href="index.html#reviews">รีวิว</a>
+    <a href="index.html#contact">ติดต่อ</a>
+    <a class="cta" href="#">💬 LINE</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>สินค้าทั้งหมด</h2>
+  <div class="sub">ALL PRODUCTS · ราคาโรงงาน ไม่ผ่านคนกลาง</div>
+
+  <div class="filters">
+    <button class="fbtn on" data-cat="all">ทั้งหมด · All</button>
+    <button class="fbtn" data-cat="frames">🖼️ กรอบรูป</button>
+    <button class="fbtn" data-cat="clocks">🕐 นาฬิกา</button>
+    <button class="fbtn" data-cat="mugs">☕ แก้ว</button>
+    <button class="fbtn" data-cat="tees">👕 เสื้อ</button>
+  </div>
+
+  <div class="cards" id="grid">
+    <!-- FRAMES -->
+    <div class="card" data-cat="frames" id="frames"><div class="img" style="background:linear-gradient(150deg,#E8A0B4,#D4728F)">🖼️<span class="badge">ขายดี 🔥</span></div><div class="body"><h3>กรอบลอย (Floating Frame)</h3><div class="en">ทุกขนาด A4–A0</div><p>รูปดูลอยอยู่ในกรอบ สวยพรีเมียม</p><span class="price">฿ — [цена]</span></div></div>
+    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#f3c3d2,#E8A0B4)">🖼️</div><div class="body"><h3>กรอบรูปโฟโต้</h3><div class="en">Photo Frame</div><p>กรอบคลาสสิกพร้อมรูปของคุณ</p><span class="price">฿ — [цена]</span></div></div>
+    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#FFDFD0,#f5b99f)">🎨</div><div class="body"><h3>กรอบผ้าแคนวาส</h3><div class="en">Canvas Frame</div><p>พิมพ์ลงผ้าแคนวาสคุณภาพสูง</p><span class="price">฿ — [цена]</span></div></div>
+    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#D4728F,#B3536F)">💍</div><div class="body"><h3>กรอบงานแต่ง / ครอบครัว</h3><div class="en">Wedding & Family</div><p>เซ็ตกรอบสำหรับโอกาสพิเศษ</p><span class="price">฿ — [цена]</span></div></div>
+    <!-- CLOCKS -->
+    <div class="card" data-cat="clocks" id="clocks"><div class="img" style="background:linear-gradient(150deg,#E8A0B4,#c98aa0)">🕐<span class="badge">ของขวัญยอดฮิต</span></div><div class="body"><h3>นาฬิกากรอบรูป</h3><div class="en">Frame Clock</div><p>นาฬิกา + รูปของคุณในชิ้นเดียว</p><span class="price">฿ — [цена]</span></div></div>
+    <div class="card" data-cat="clocks"><div class="img" style="background:linear-gradient(150deg,#f3c3d2,#d795ab)">⏰</div><div class="body"><h3>นาฬิกาดีไซน์พิเศษ</h3><div class="en">Custom Clock</div><p>ออกแบบตามธีมที่คุณต้องการ</p><span class="price">฿ — [цена]</span></div></div>
+    <!-- MUGS -->
+    <div class="card" data-cat="mugs" id="mugs"><div class="img" style="background:linear-gradient(150deg,#FFDFD0,#f0ad91)">☕</div><div class="body"><h3>แก้วสกรีนรูป</h3><div class="en">Photo Mug</div><p>สกรีนรูปคมชัด สีสด ทนทาน</p><span class="price">฿ — [цена]</span></div></div>
+    <div class="card" data-cat="mugs"><div class="img" style="background:linear-gradient(150deg,#f5c6d3,#e8a0b4)">💌</div><div class="body"><h3>แก้วคู่ / ของขวัญ</h3><div class="en">Couple Set</div><p>เซ็ตแก้วคู่พร้อมข้อความพิเศษ</p><span class="price">฿ — [цена]</span></div></div>
+    <!-- TEES -->
+    <div class="card" data-cat="tees" id="tees"><div class="img" style="background:linear-gradient(150deg,#D4728F,#B3536F)">👕</div><div class="body"><h3>เสื้อสกรีน</h3><div class="en">Custom T-Shirt</div><p>สกรีนคุณภาพ ราคาโรงงาน</p><span class="price">฿ — [цена]</span></div></div>
+    <div class="card" data-cat="tees"><div class="img" style="background:linear-gradient(150deg,#e8a0b4,#d4728f)">👥</div><div class="body"><h3>เสื้อทีม / อีเวนต์</h3><div class="en">Team & Events</div><p>สั่งจำนวนมาก ลดพิเศษ</p><span class="price">฿ — [цена]</span></div></div>
+  </div>
+
+  <div class="note">📌 Placeholder-карточки: пришлите прайс и фото — заменю «฿ —» на реальные цены и подставлю изображения. Карточек может быть сколько угодно в каждой категории.</div>
+
+  <div style="text-align:center;margin-top:36px">
+    <a class="btn btn-line" href="#">💬 สอบถาม/สั่งซื้อทาง LINE</a>
+    <a class="btn btn-primary" href="studio.html" style="margin-left:10px">✨ ออกแบบเองใน Design Studio</a>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <div class="logo hand">♥ DJ Shop</div>
+      <p>113/69 หมู่13 เมืองพัทยา ตำบลหนองปรือ<br>อำเภอบางละมุง ชลบุรี 20150<br>📞 094 342 7274 · เปิดทุกวัน</p>
+    </div>
+    <div>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px">ติดตามเรา</p>
+      <div class="socials">
+        <a class="line" href="#">💬 LINE</a>
+        <a class="fb" href="https://www.facebook.com/share/19SeNPXHiD/" target="_blank">f Facebook</a>
+        <a class="tt" href="#">♪ TikTok</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px">เมนู</p>
+      <p><a href="index.html" style="text-decoration:none">หน้าแรก</a><br><a href="studio.html" style="text-decoration:none">Design Studio</a><br><a href="index.html#contact" style="text-decoration:none">ติดต่อเรา</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 DJ Shop · Pattaya, Thailand</div>
+</footer>
+
+<a class="chat" href="#">💬 แชทกับเรา</a>
+
+<script>
+const btns=document.querySelectorAll('.fbtn'),cards=document.querySelectorAll('#grid .card');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  const c=b.dataset.cat;
+  cards.forEach(k=>k.style.display=(c==='all'||k.dataset.cat===c)?'block':'none');
+}));
+// открытие по якорю #frames/#clocks/#mugs/#tees
+const h=location.hash.replace('#','');
+if(['frames','clocks','mugs','tees'].includes(h)){document.querySelector(`[data-cat="${h}"].fbtn`)?.click();}
+</script>
+
+</body>
+</html>
