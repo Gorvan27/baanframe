@@ -1,0 +1,139 @@
+/* DJ Shop — переключатель языков TH/EN (тайский по умолчанию) */
+const I18N = {
+  th: {
+    topbar: "🎀 กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน",
+    "nav.home": "หน้าแรก", "nav.shop": "สินค้า", "nav.studio": "Design Studio ✨",
+    "nav.reviews": "รีวิว", "nav.contact": "ติดต่อ", "nav.order": "สั่งทำเลย",
+    chat: "💬 แชทกับเรา",
+    "hero.tag": "handmade with love in Pattaya 🧡",
+    "hero.h1": "เก็บทุกความทรงจำดี ๆ<br>ไว้ในกรอบเดียว",
+    "hero.p": "กรอบรูป นาฬิกา แก้ว เสื้อสกรีน — ทำตามสั่งเพื่อคุณโดยเฉพาะ ราคาโรงงาน สั่งง่ายผ่าน LINE",
+    "hero.shop": "ดูสินค้า", "hero.line": "💬 สั่งผ่าน LINE",
+    "pola.frame": "กรอบลอย", "pola.clock": "นาฬิกากรอบรูป", "pola.mug": "แก้วสกรีน", "pola.tee": "เสื้อสกรีน",
+    "best.h2": "สินค้าขายดี", "best.sub": "BEST SELLERS",
+    "best.1": "กรอบลอยพรีเมียม", "best.1d": "ทุกขนาด พร้อมรูปของคุณ",
+    "best.2": "นาฬิกากรอบรูป", "best.2d": "ดีไซน์เฉพาะคุณ",
+    "best.3": "แก้วสกรีน", "best.3d": "รูปและข้อความตามสั่ง",
+    "best.4": "เสื้อสกรีน", "best.4d": "คุณภาพดี ราคาโรงงาน",
+    "best.all": "ดูสินค้าทั้งหมด",
+    "banner.tag": "✨ ใหม่! Design Studio",
+    "banner.h2": "ออกแบบกรอบในแบบของคุณ",
+    "banner.p": "อัปโหลดรูปของคุณ เลือกสไตล์กรอบและโทนสี เห็นตัวอย่างทันที",
+    "banner.btn": "ลองออกแบบเลย",
+    "banner.drop": "📤 ลากรูปมาวางที่นี่",
+    "steps.h2": "สั่งง่าย ๆ แค่ 3 ขั้นตอน", "steps.sub": "HOW TO ORDER",
+    "step.1": "1. ทัก LINE ส่งรูป", "step.1d": "ส่งรูปผ่าน LINE หรือ Facebook",
+    "step.2": "2. เลือกแบบ ยืนยันดีไซน์", "step.2d": "เลือกสไตล์ ขนาด และยืนยันแบบ",
+    "step.3": "3. รับสินค้า", "step.3d": "รับที่ร้านพัทยา หรือส่งทั่วประเทศ",
+    "rev.h2": "รีวิวจากลูกค้า", "rev.sub": "จาก Google Maps", "rev.badge": "· รีวิวจริงจากลูกค้า", "rev.src": "รีวิวจาก Google Maps",
+    "contact.h2": "มาหาเราได้เลย", "contact.sub": "VISIT US · PATTAYA",
+    "contact.open": "เปิดทุกวัน",
+    "footer.follow": "ติดตามเรา", "footer.menu": "เมนู", "footer.help": "ช่วยเหลือ",
+    "footer.helptxt": "วิธีสั่งซื้อ · การจัดส่ง<br>คำถามที่พบบ่อย",
+    "footer.open": "เปิดทุกวัน · Open daily", "footer.hours": "เวลาทำการ",
+    "shop.h2": "สินค้าทั้งหมด", "shop.sub": "ราคาโรงงาน ไม่ผ่านคนกลาง",
+    "f.all": "ทั้งหมด", "f.frames": "🖼️ กรอบรูป", "f.clocks": "🕐 นาฬิกา", "f.mugs": "☕ แก้ว", "f.tees": "👕 เสื้อ",
+    "p.1": "กรอบลอย (Floating Frame)", "p.1s": "ทุกขนาด A4–A0", "p.1d": "รูปดูลอยอยู่ในกรอบ สวยพรีเมียม",
+    "p.2": "กรอบรูปโฟโต้", "p.2s": "Photo Frame", "p.2d": "กรอบคลาสสิกพร้อมรูปของคุณ",
+    "p.3": "กรอบผ้าแคนวาส", "p.3s": "Canvas Frame", "p.3d": "พิมพ์ลงผ้าแคนวาสคุณภาพสูง",
+    "p.4": "กรอบงานแต่ง / ครอบครัว", "p.4s": "Wedding & Family", "p.4d": "เซ็ตกรอบสำหรับโอกาสพิเศษ",
+    "p.5": "นาฬิกากรอบรูป", "p.5s": "Frame Clock", "p.5d": "นาฬิกา + รูปของคุณในชิ้นเดียว",
+    "p.6": "นาฬิกาดีไซน์พิเศษ", "p.6s": "Custom Clock", "p.6d": "ออกแบบตามธีมที่คุณต้องการ",
+    "p.7": "แก้วสกรีนรูป", "p.7s": "Photo Mug", "p.7d": "สกรีนรูปคมชัด สีสด ทนทาน",
+    "p.8": "แก้วคู่ / ของขวัญ", "p.8s": "Couple Set", "p.8d": "เซ็ตแก้วคู่พร้อมข้อความพิเศษ",
+    "p.9": "เสื้อสกรีน", "p.9s": "Custom T-Shirt", "p.9d": "สกรีนคุณภาพ ราคาโรงงาน",
+    "p.10": "เสื้อทีม / อีเวนต์", "p.10s": "Team & Events", "p.10d": "สั่งจำนวนมาก ลดพิเศษ",
+    "badge.hot": "ขายดี 🔥", "badge.gift": "ของขวัญยอดฮิต", "price.from": "เริ่มต้น",
+    "shop.note": "📌 ราคาจะอัปเดตเร็ว ๆ นี้ — สอบถามราคาได้เลยทาง LINE",
+    "shop.line": "💬 สอบถาม/สั่งซื้อทาง LINE", "shop.studio": "✨ ออกแบบเองใน Design Studio",
+    "st.h2": "ออกแบบกรอบในแบบของคุณ", "st.sub": "อัปโหลดรูป → เลือกกรอบและสี → เห็นตัวอย่างทันที",
+    "st.1": "1. อัปโหลดรูปของคุณ",
+    "st.drop": "📤 แตะเพื่อเลือกรูป หรือลากมาวางที่นี่",
+    "st.2": "2. เลือกสไตล์กรอบ", "st.3": "3. สีขอบใน (พาสปาร์ตู)", "st.4": "4. ขนาด",
+    "st.custom": "สั่งขนาดพิเศษ",
+    "st.send": "💬 ส่งแบบนี้ให้ร้านทาง LINE",
+    "st.ai": "🤖 <b>AI Studio — เร็ว ๆ นี้!</b><br>สร้างภาพสไตล์พิเศษด้วย AI (การ์ตูน สีน้ำ วินเทจ ฯลฯ) แล้วใส่กรอบได้เลย — ฟีเจอร์แรกในไทย",
+    "st.prev": "ตัวอย่าง · Live preview",
+    "st.ph": "รูปของคุณจะแสดงที่นี่",
+    "st.note": "ตัวอย่างเบื้องต้น — ทีมงานจะยืนยันแบบจริงก่อนผลิตทุกครั้ง 💕",
+    "st.alert": "ในเวอร์ชันจริง: ระบบจะส่งรูป + สไตล์ + ขนาดที่เลือกไปที่ LINE ของร้านโดยอัตโนมัติ 💚"
+  },
+  en: {
+    topbar: "🎀 Frames · Clocks · Mugs · Tees — factory prices, made in Pattaya",
+    "nav.home": "Home", "nav.shop": "Shop", "nav.studio": "Design Studio ✨",
+    "nav.reviews": "Reviews", "nav.contact": "Contact", "nav.order": "Order now",
+    chat: "💬 Chat with us",
+    "hero.tag": "handmade with love in Pattaya 🧡",
+    "hero.h1": "Keep every precious memory<br>in one beautiful frame",
+    "hero.p": "Custom photo frames, clocks, mugs & tees — made just for you at factory prices. Easy ordering via LINE.",
+    "hero.shop": "Shop now", "hero.line": "💬 Order via LINE",
+    "pola.frame": "Floating frame", "pola.clock": "Frame clock", "pola.mug": "Custom mug", "pola.tee": "Custom tee",
+    "best.h2": "Best sellers", "best.sub": "สินค้าขายดี",
+    "best.1": "Premium floating frame", "best.1d": "Any size, with your photo",
+    "best.2": "Frame clock", "best.2d": "A design that's uniquely yours",
+    "best.3": "Custom mug", "best.3d": "Your photo & message",
+    "best.4": "Custom t-shirt", "best.4d": "Great quality, factory price",
+    "best.all": "View all products",
+    "banner.tag": "✨ New! Design Studio",
+    "banner.h2": "Design your own frame",
+    "banner.p": "Upload your photo, pick a frame style & color palette — see the preview instantly.",
+    "banner.btn": "Try the designer",
+    "banner.drop": "📤 Drop your photo here",
+    "steps.h2": "Order in 3 easy steps", "steps.sub": "วิธีสั่งซื้อ",
+    "step.1": "1. Message us on LINE", "step.1d": "Send your photo via LINE or Facebook",
+    "step.2": "2. Confirm your design", "step.2d": "Choose style, size & approve the mockup",
+    "step.3": "3. Get your order", "step.3d": "Pickup in Pattaya or delivery nationwide",
+    "rev.h2": "Customer reviews", "rev.sub": "from Google Maps", "rev.badge": "· real customer reviews", "rev.src": "Review from Google Maps",
+    "contact.h2": "Visit us", "contact.sub": "มาหาเราได้เลย · PATTAYA",
+    "contact.open": "Open daily",
+    "footer.follow": "Follow us", "footer.menu": "Menu", "footer.help": "Help",
+    "footer.helptxt": "How to order · Delivery<br>FAQ",
+    "footer.open": "Open daily", "footer.hours": "Opening hours",
+    "shop.h2": "All products", "shop.sub": "Factory prices, no middlemen",
+    "f.all": "All", "f.frames": "🖼️ Frames", "f.clocks": "🕐 Clocks", "f.mugs": "☕ Mugs", "f.tees": "👕 Tees",
+    "p.1": "Floating Frame", "p.1s": "Any size A4–A0", "p.1d": "Your photo floats inside the frame — premium look",
+    "p.2": "Photo Frame", "p.2s": "กรอบรูปโฟโต้", "p.2d": "A classic frame with your photo",
+    "p.3": "Canvas Frame", "p.3s": "กรอบผ้าแคนวาส", "p.3d": "Printed on high-quality canvas",
+    "p.4": "Wedding & Family", "p.4s": "กรอบงานแต่ง", "p.4d": "Frame sets for special occasions",
+    "p.5": "Frame Clock", "p.5s": "นาฬิกากรอบรูป", "p.5d": "A clock + your photo in one piece",
+    "p.6": "Custom Clock", "p.6s": "นาฬิกาดีไซน์พิเศษ", "p.6d": "Designed around your theme",
+    "p.7": "Photo Mug", "p.7s": "แก้วสกรีนรูป", "p.7d": "Sharp, vivid, durable print",
+    "p.8": "Couple Set", "p.8s": "แก้วคู่", "p.8d": "A mug set with your special message",
+    "p.9": "Custom T-Shirt", "p.9s": "เสื้อสกรีน", "p.9d": "Quality print, factory price",
+    "p.10": "Team & Events", "p.10s": "เสื้อทีม", "p.10d": "Bulk orders, special discount",
+    "badge.hot": "Hot 🔥", "badge.gift": "Top gift", "price.from": "from",
+    "shop.note": "📌 Prices coming soon — message us on LINE for a quote",
+    "shop.line": "💬 Ask / order via LINE", "shop.studio": "✨ Design your own in the Studio",
+    "st.h2": "Design your own frame", "st.sub": "Upload a photo → pick frame & colors → instant preview",
+    "st.1": "1. Upload your photo",
+    "st.drop": "📤 Tap to choose a photo or drag & drop here",
+    "st.2": "2. Frame style", "st.3": "3. Mat color", "st.4": "4. Size",
+    "st.custom": "Custom size",
+    "st.send": "💬 Send this design to us on LINE",
+    "st.ai": "🤖 <b>AI Studio — coming soon!</b><br>Restyle your photo with AI (cartoon, watercolor, vintage…) and frame it — first in Thailand.",
+    "st.prev": "Live preview",
+    "st.ph": "Your photo appears here",
+    "st.note": "Rough preview — we always confirm the final design before production 💕",
+    "st.alert": "In the live version this sends your photo + style + size straight to our LINE 💚"
+  }
+};
+
+function setLang(lang) {
+  const dict = I18N[lang] || I18N.th;
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const k = el.getAttribute("data-i18n");
+    if (dict[k] !== undefined) el.innerHTML = dict[k];
+  });
+  document.querySelectorAll(".langsw button").forEach(b => b.classList.toggle("on", b.dataset.lang === lang));
+  try { localStorage.setItem("djshop_lang", lang); } catch (e) {}
+  window.DJLANG = lang;
+}
+function t(k) { return (I18N[window.DJLANG || "th"] || I18N.th)[k] || k; }
+document.addEventListener("DOMContentLoaded", () => {
+  let lang = "th";
+  try { lang = localStorage.getItem("djshop_lang") || "th"; } catch (e) {}
+  setLang(lang);
+  document.querySelectorAll(".langsw button").forEach(b =>
+    b.addEventListener("click", () => setLang(b.dataset.lang)));
+});

@@ -122,3 +122,9 @@ footer p{font-size:14px;opacity:.85}
   .burger{display:block}
 }
 @media(max-width:560px){.cards,.reviews{grid-template-columns:1fr}}
+
+/* Language switcher */
+.langsw{display:flex;gap:4px;background:#fbe3ea;border-radius:20px;padding:3px;margin-left:auto;margin-right:10px}
+.langsw button{border:none;background:transparent;font-family:'Prompt',sans-serif;font-size:13px;padding:5px 12px;border-radius:16px;cursor:pointer;color:var(--rose-dark);font-weight:500}
+.langsw button.on{background:var(--rose-deep);color:#fff}
+@media(min-width:901px){.langsw{margin-left:12px;margin-right:0}}

@@ -9,55 +9,52 @@
 </head>
 <body>
 
-<div class="topbar">🎀 กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน</div>
+<div class="topbar" data-i18n="topbar">🎀 กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน</div>
 
 <header>
   <a class="logo" href="index.html"><span class="heart">♥</span> DJ Shop<small>FRAME &amp; GIFT STUDIO</small></a>
+  <div class="langsw"><button data-lang="th" class="on">ไทย</button><button data-lang="en">EN</button></div>
   <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
   <nav id="nav">
-    <a href="index.html">หน้าแรก · Home</a>
-    <a href="shop.html" class="active">สินค้า · Shop</a>
-    <a href="studio.html">Design Studio ✨</a>
-    <a href="index.html#reviews">รีวิว</a>
-    <a href="index.html#contact">ติดต่อ</a>
+    <a href="index.html" data-i18n="nav.home">หน้าแรก</a>
+    <a href="shop.html" class="active" data-i18n="nav.shop">สินค้า</a>
+    <a href="studio.html" data-i18n="nav.studio">Design Studio ✨</a>
+    <a href="index.html#reviews" data-i18n="nav.reviews">รีวิว</a>
+    <a href="index.html#contact" data-i18n="nav.contact">ติดต่อ</a>
     <a class="cta" href="#">💬 LINE</a>
   </nav>
 </header>
 
 <section class="section">
-  <h2>สินค้าทั้งหมด</h2>
-  <div class="sub">ALL PRODUCTS · ราคาโรงงาน ไม่ผ่านคนกลาง</div>
+  <h2 data-i18n="shop.h2">สินค้าทั้งหมด</h2>
+  <div class="sub" data-i18n="shop.sub">ราคาโรงงาน ไม่ผ่านคนกลาง</div>
 
   <div class="filters">
-    <button class="fbtn on" data-cat="all">ทั้งหมด · All</button>
-    <button class="fbtn" data-cat="frames">🖼️ กรอบรูป</button>
-    <button class="fbtn" data-cat="clocks">🕐 นาฬิกา</button>
-    <button class="fbtn" data-cat="mugs">☕ แก้ว</button>
-    <button class="fbtn" data-cat="tees">👕 เสื้อ</button>
+    <button class="fbtn on" data-cat="all" data-i18n="f.all">ทั้งหมด</button>
+    <button class="fbtn" data-cat="frames" data-i18n="f.frames">🖼️ กรอบรูป</button>
+    <button class="fbtn" data-cat="clocks" data-i18n="f.clocks">🕐 นาฬิกา</button>
+    <button class="fbtn" data-cat="mugs" data-i18n="f.mugs">☕ แก้ว</button>
+    <button class="fbtn" data-cat="tees" data-i18n="f.tees">👕 เสื้อ</button>
   </div>
 
   <div class="cards" id="grid">
-    <!-- FRAMES -->
-    <div class="card" data-cat="frames" id="frames"><div class="img" style="background:linear-gradient(150deg,#E8A0B4,#D4728F)">🖼️<span class="badge">ขายดี 🔥</span></div><div class="body"><h3>กรอบลอย (Floating Frame)</h3><div class="en">ทุกขนาด A4–A0</div><p>รูปดูลอยอยู่ในกรอบ สวยพรีเมียม</p><span class="price">฿ — [цена]</span></div></div>
-    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#f3c3d2,#E8A0B4)">🖼️</div><div class="body"><h3>กรอบรูปโฟโต้</h3><div class="en">Photo Frame</div><p>กรอบคลาสสิกพร้อมรูปของคุณ</p><span class="price">฿ — [цена]</span></div></div>
-    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#FFDFD0,#f5b99f)">🎨</div><div class="body"><h3>กรอบผ้าแคนวาส</h3><div class="en">Canvas Frame</div><p>พิมพ์ลงผ้าแคนวาสคุณภาพสูง</p><span class="price">฿ — [цена]</span></div></div>
-    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#D4728F,#B3536F)">💍</div><div class="body"><h3>กรอบงานแต่ง / ครอบครัว</h3><div class="en">Wedding & Family</div><p>เซ็ตกรอบสำหรับโอกาสพิเศษ</p><span class="price">฿ — [цена]</span></div></div>
-    <!-- CLOCKS -->
-    <div class="card" data-cat="clocks" id="clocks"><div class="img" style="background:linear-gradient(150deg,#E8A0B4,#c98aa0)">🕐<span class="badge">ของขวัญยอดฮิต</span></div><div class="body"><h3>นาฬิกากรอบรูป</h3><div class="en">Frame Clock</div><p>นาฬิกา + รูปของคุณในชิ้นเดียว</p><span class="price">฿ — [цена]</span></div></div>
-    <div class="card" data-cat="clocks"><div class="img" style="background:linear-gradient(150deg,#f3c3d2,#d795ab)">⏰</div><div class="body"><h3>นาฬิกาดีไซน์พิเศษ</h3><div class="en">Custom Clock</div><p>ออกแบบตามธีมที่คุณต้องการ</p><span class="price">฿ — [цена]</span></div></div>
-    <!-- MUGS -->
-    <div class="card" data-cat="mugs" id="mugs"><div class="img" style="background:linear-gradient(150deg,#FFDFD0,#f0ad91)">☕</div><div class="body"><h3>แก้วสกรีนรูป</h3><div class="en">Photo Mug</div><p>สกรีนรูปคมชัด สีสด ทนทาน</p><span class="price">฿ — [цена]</span></div></div>
-    <div class="card" data-cat="mugs"><div class="img" style="background:linear-gradient(150deg,#f5c6d3,#e8a0b4)">💌</div><div class="body"><h3>แก้วคู่ / ของขวัญ</h3><div class="en">Couple Set</div><p>เซ็ตแก้วคู่พร้อมข้อความพิเศษ</p><span class="price">฿ — [цена]</span></div></div>
-    <!-- TEES -->
-    <div class="card" data-cat="tees" id="tees"><div class="img" style="background:linear-gradient(150deg,#D4728F,#B3536F)">👕</div><div class="body"><h3>เสื้อสกรีน</h3><div class="en">Custom T-Shirt</div><p>สกรีนคุณภาพ ราคาโรงงาน</p><span class="price">฿ — [цена]</span></div></div>
-    <div class="card" data-cat="tees"><div class="img" style="background:linear-gradient(150deg,#e8a0b4,#d4728f)">👥</div><div class="body"><h3>เสื้อทีม / อีเวนต์</h3><div class="en">Team & Events</div><p>สั่งจำนวนมาก ลดพิเศษ</p><span class="price">฿ — [цена]</span></div></div>
+    <div class="card" data-cat="frames" id="frames"><div class="img" style="background:linear-gradient(150deg,#E8A0B4,#D4728F)">🖼️<span class="badge" data-i18n="badge.hot">ขายดี 🔥</span></div><div class="body"><h3 data-i18n="p.1">กรอบลอย (Floating Frame)</h3><div class="en" data-i18n="p.1s">ทุกขนาด A4–A0</div><p data-i18n="p.1d">รูปดูลอยอยู่ในกรอบ สวยพรีเมียม</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#f3c3d2,#E8A0B4)">🖼️</div><div class="body"><h3 data-i18n="p.2">กรอบรูปโฟโต้</h3><div class="en" data-i18n="p.2s">Photo Frame</div><p data-i18n="p.2d">กรอบคลาสสิกพร้อมรูปของคุณ</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#FFDFD0,#f5b99f)">🎨</div><div class="body"><h3 data-i18n="p.3">กรอบผ้าแคนวาส</h3><div class="en" data-i18n="p.3s">Canvas Frame</div><p data-i18n="p.3d">พิมพ์ลงผ้าแคนวาสคุณภาพสูง</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="frames"><div class="img" style="background:linear-gradient(150deg,#D4728F,#B3536F)">💍</div><div class="body"><h3 data-i18n="p.4">กรอบงานแต่ง / ครอบครัว</h3><div class="en" data-i18n="p.4s">Wedding &amp; Family</div><p data-i18n="p.4d">เซ็ตกรอบสำหรับโอกาสพิเศษ</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="clocks" id="clocks"><div class="img" style="background:linear-gradient(150deg,#E8A0B4,#c98aa0)">🕐<span class="badge" data-i18n="badge.gift">ของขวัญยอดฮิต</span></div><div class="body"><h3 data-i18n="p.5">นาฬิกากรอบรูป</h3><div class="en" data-i18n="p.5s">Frame Clock</div><p data-i18n="p.5d">นาฬิกา + รูปของคุณในชิ้นเดียว</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="clocks"><div class="img" style="background:linear-gradient(150deg,#f3c3d2,#d795ab)">⏰</div><div class="body"><h3 data-i18n="p.6">นาฬิกาดีไซน์พิเศษ</h3><div class="en" data-i18n="p.6s">Custom Clock</div><p data-i18n="p.6d">ออกแบบตามธีมที่คุณต้องการ</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="mugs" id="mugs"><div class="img" style="background:linear-gradient(150deg,#FFDFD0,#f0ad91)">☕</div><div class="body"><h3 data-i18n="p.7">แก้วสกรีนรูป</h3><div class="en" data-i18n="p.7s">Photo Mug</div><p data-i18n="p.7d">สกรีนรูปคมชัด สีสด ทนทาน</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="mugs"><div class="img" style="background:linear-gradient(150deg,#f5c6d3,#e8a0b4)">💌</div><div class="body"><h3 data-i18n="p.8">แก้วคู่ / ของขวัญ</h3><div class="en" data-i18n="p.8s">Couple Set</div><p data-i18n="p.8d">เซ็ตแก้วคู่พร้อมข้อความพิเศษ</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="tees" id="tees"><div class="img" style="background:linear-gradient(150deg,#D4728F,#B3536F)">👕</div><div class="body"><h3 data-i18n="p.9">เสื้อสกรีน</h3><div class="en" data-i18n="p.9s">Custom T-Shirt</div><p data-i18n="p.9d">สกรีนคุณภาพ ราคาโรงงาน</p><span class="price">฿ —</span></div></div>
+    <div class="card" data-cat="tees"><div class="img" style="background:linear-gradient(150deg,#e8a0b4,#d4728f)">👥</div><div class="body"><h3 data-i18n="p.10">เสื้อทีม / อีเวนต์</h3><div class="en" data-i18n="p.10s">Team &amp; Events</div><p data-i18n="p.10d">สั่งจำนวนมาก ลดพิเศษ</p><span class="price">฿ —</span></div></div>
   </div>
 
-  <div class="note">📌 Placeholder-карточки: пришлите прайс и фото — заменю «฿ —» на реальные цены и подставлю изображения. Карточек может быть сколько угодно в каждой категории.</div>
+  <div class="note" data-i18n="shop.note">📌 ราคาจะอัปเดตเร็ว ๆ นี้ — สอบถามราคาได้เลยทาง LINE</div>
 
   <div style="text-align:center;margin-top:36px">
-    <a class="btn btn-line" href="#">💬 สอบถาม/สั่งซื้อทาง LINE</a>
-    <a class="btn btn-primary" href="studio.html" style="margin-left:10px">✨ ออกแบบเองใน Design Studio</a>
+    <a class="btn btn-line" href="#" data-i18n="shop.line">💬 สอบถาม/สั่งซื้อทาง LINE</a>
+    <a class="btn btn-primary" href="studio.html" style="margin-left:10px" data-i18n="shop.studio">✨ ออกแบบเองใน Design Studio</a>
   </div>
 </section>
 
@@ -65,10 +62,10 @@
   <div class="fgrid">
     <div>
       <div class="logo hand">♥ DJ Shop</div>
-      <p>113/69 หมู่13 เมืองพัทยา ตำบลหนองปรือ<br>อำเภอบางละมุง ชลบุรี 20150<br>📞 094 342 7274 · เปิดทุกวัน</p>
+      <p>113/69 หมู่13 เมืองพัทยา ตำบลหนองปรือ<br>อำเภอบางละมุง ชลบุรี 20150<br>📞 094 342 7274 · <span data-i18n="footer.open">เปิดทุกวัน</span></p>
     </div>
     <div>
-      <p style="font-weight:500;color:#fff;margin-bottom:8px">ติดตามเรา</p>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px" data-i18n="footer.follow">ติดตามเรา</p>
       <div class="socials">
         <a class="line" href="#">💬 LINE</a>
         <a class="fb" href="https://www.facebook.com/share/19SeNPXHiD/" target="_blank">f Facebook</a>
@@ -76,15 +73,16 @@
       </div>
     </div>
     <div>
-      <p style="font-weight:500;color:#fff;margin-bottom:8px">เมนู</p>
-      <p><a href="index.html" style="text-decoration:none">หน้าแรก</a><br><a href="studio.html" style="text-decoration:none">Design Studio</a><br><a href="index.html#contact" style="text-decoration:none">ติดต่อเรา</a></p>
+      <p style="font-weight:500;color:#fff;margin-bottom:8px" data-i18n="footer.menu">เมนู</p>
+      <p><a href="index.html" style="text-decoration:none" data-i18n="nav.home">หน้าแรก</a><br><a href="studio.html" style="text-decoration:none">Design Studio</a><br><a href="index.html#contact" style="text-decoration:none" data-i18n="nav.contact">ติดต่อ</a></p>
     </div>
   </div>
   <div class="copy">© 2026 DJ Shop · Pattaya, Thailand</div>
 </footer>
 
-<a class="chat" href="#">💬 แชทกับเรา</a>
+<a class="chat" href="#" data-i18n="chat">💬 แชทกับเรา</a>
 
+<script src="i18n.js"></script>
 <script>
 const btns=document.querySelectorAll('.fbtn'),cards=document.querySelectorAll('#grid .card');
 btns.forEach(b=>b.addEventListener('click',()=>{
@@ -92,7 +90,6 @@ btns.forEach(b=>b.addEventListener('click',()=>{
   const c=b.dataset.cat;
   cards.forEach(k=>k.style.display=(c==='all'||k.dataset.cat===c)?'block':'none');
 }));
-// открытие по якорю #frames/#clocks/#mugs/#tees
 const h=location.hash.replace('#','');
 if(['frames','clocks','mugs','tees'].includes(h)){document.querySelector(`[data-cat="${h}"].fbtn`)?.click();}
 </script>
