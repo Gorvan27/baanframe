@@ -4,50 +4,44 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DJ Shop — กรอบรูปพร้อมนาฬิกา รับสกรีนเสื้อ ราคาโรงงาน | Pattaya</title>
-<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=5">
 <style>
-.hero{text-align:center;padding:66px 6% 40px;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 0%,#fff0f4 0%,transparent 70%)}
-.hero .hand-tag{display:inline-block;background:var(--peach);color:#b3705a;border-radius:30px;padding:8px 22px;font-size:14px;margin-bottom:22px;font-family:'Mali',cursive;box-shadow:0 6px 16px rgba(255,140,110,.18)}
-.hero h1{font-size:48px;font-family:'Mali',cursive;font-weight:600;color:var(--rose-dark);line-height:1.28;letter-spacing:.3px}
-.hero p{max-width:520px;margin:20px auto 30px;color:#8d7079;font-size:16.5px}
-.hero .btn{transition:transform .2s,box-shadow .2s}
-.deco{position:absolute;font-size:28px;opacity:.5}
-.d1{top:40px;left:12%}.d2{top:120px;right:14%}.d3{bottom:20px;left:20%}.d4{bottom:60px;right:22%}
-.polas{display:flex;justify-content:center;gap:26px;padding:26px 6% 6px;flex-wrap:wrap}
-.pola{background:#fff;padding:14px 14px 40px;box-shadow:0 14px 34px rgba(179,83,111,.16);transform:rotate(-3deg);transition:.25s;width:200px;text-decoration:none;color:var(--ink)}
-.pola:nth-child(2){transform:rotate(2deg)}
-.pola:nth-child(3){transform:rotate(-1deg)}
-.pola:nth-child(4){transform:rotate(3deg)}
-.pola:hover{transform:rotate(0) scale(1.05);z-index:2}
-.pola .ph{height:170px;display:flex;align-items:center;justify-content:center;font-size:52px}
-.pola:nth-child(1) .ph{background:linear-gradient(150deg,#E8A0B4,#D4728F)}
-.pola:nth-child(2) .ph{background:linear-gradient(150deg,#FFDFD0,#f5b99f)}
-.pola:nth-child(3) .ph{background:linear-gradient(150deg,#f3c3d2,#E8A0B4)}
-.pola:nth-child(4) .ph{background:linear-gradient(150deg,#D4728F,#B3536F)}
-.pola .cap{font-family:'Mali',cursive;text-align:center;margin-top:12px;font-size:14.5px;color:#8d7079}
-.banner{margin:0 6%;background:#fff;border-radius:30px;padding:46px 7%;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;box-shadow:0 16px 40px rgba(179,83,111,.12);border:2px dashed var(--rose)}
-.banner h2{font-family:'Mali',cursive;font-size:28px;color:var(--rose-dark);margin-bottom:12px;font-weight:600}
-.banner p{color:#8d7079;margin-bottom:22px}
-.banner .tag{display:inline-block;background:var(--rose-deep);color:#fff;border-radius:20px;padding:5px 16px;font-size:13px;margin-bottom:14px}
-.mock{background:var(--bg);border-radius:20px;padding:24px;text-align:center}
-.mock .up{border:2px dashed var(--rose);border-radius:14px;padding:26px;color:#c193a2;font-size:14px;background:#fff}
-.mock .row{display:flex;gap:10px;justify-content:center;margin-top:14px}
-@media(max-width:900px){.banner{grid-template-columns:1fr}.hero h1{font-size:32px}}
+.hero{text-align:center;padding:110px 7% 70px;position:relative;overflow:hidden}
+.hero .hand-tag{display:inline-block;color:var(--rose-deep);font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:30px;font-weight:500;position:relative;padding-bottom:14px}
+.hero .hand-tag::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:34px;height:1px;background:var(--rose)}
+.hero h1{font-size:64px;font-family:'Trirong',serif;font-weight:400;color:var(--ink);line-height:1.16;letter-spacing:.5px}
+.hero p{max-width:480px;margin:26px auto 40px;color:var(--muted);font-size:16px;font-weight:300;line-height:1.8}
+.hero .btn{margin:0 6px}
+.deco{display:none}
+.polas{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:10px 7% 20px;max-width:1100px;margin:0 auto}
+.pola{background:var(--surface);border:1px solid var(--line);transition:transform .4s cubic-bezier(.2,.7,.3,1),box-shadow .4s;text-decoration:none;color:var(--ink);overflow:hidden}
+.pola:hover{transform:translateY(-6px);box-shadow:0 24px 46px -26px rgba(46,39,36,.3)}
+.pola .ph{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-size:44px;background:var(--rose-soft)}
+.pola .cap{font-family:'Trirong',serif;text-align:center;padding:16px 8px;font-size:16px;color:var(--ink)}
+.banner{margin:0 7%;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:60px 7%;display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+.banner .tag{display:inline-block;color:var(--rose-deep);font-size:11px;letter-spacing:3px;text-transform:uppercase;margin-bottom:18px;font-weight:500}
+.banner h2{font-family:'Trirong',serif;font-size:34px;color:var(--ink);margin-bottom:16px;font-weight:400;line-height:1.25}
+.banner p{color:var(--muted);margin-bottom:30px;font-weight:300}
+.mock{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:30px;text-align:center}
+.mock .up{border:1px dashed var(--rose);border-radius:10px;padding:30px;color:var(--muted);font-size:13px;background:var(--surface);font-weight:300}
+.mock .row{display:flex;gap:12px;justify-content:center;margin-top:18px}
+.mock .sw{width:30px;height:30px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+@media(max-width:900px){.banner{grid-template-columns:1fr}.hero h1{font-size:40px}.hero{padding:64px 7% 44px}.polas{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 
-<div class="topbar" data-i18n="topbar">🎀 กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน</div>
+<div class="topbar" data-i18n="topbar">กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน</div>
 
 <header>
-  <a class="logo" href="index.html"><span class="heart">♥</span> DJ Shop<small>FRAME &amp; GIFT STUDIO</small></a>
+  <a class="logo" href="index.html">DJ Shop<small>Frame &amp; Gift Studio</small></a>
   <div class="langsw"><button data-lang="th" class="on">ไทย</button><button data-lang="en">EN</button></div>
   <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
   <nav id="nav">
     <a href="index.html" class="active" data-i18n="nav.home">หน้าแรก</a>
     <a href="shop.html" data-i18n="nav.shop">สินค้า</a>
-    <a href="studio.html" data-i18n="nav.studio">Design Studio ✨</a>
+    <a href="studio.html" data-i18n="nav.studio">Design Studio</a>
     <a href="index.html#reviews" data-i18n="nav.reviews">รีวิว</a>
     <a href="index.html#contact" data-i18n="nav.contact">ติดต่อ</a>
     <a class="cta" href="shop.html" data-i18n="nav.order">สั่งทำเลย</a>
@@ -55,16 +49,15 @@
 </header>
 
 <section class="hero">
-  <span class="deco d1">🌸</span><span class="deco d2">💕</span><span class="deco d3">🎀</span><span class="deco d4">🌷</span>
-  <div class="hand-tag" data-i18n="hero.tag">handmade with love in Pattaya 🧡</div>
+  <div class="hand-tag" data-i18n="hero.tag">Handmade in Pattaya</div>
   <h1 data-i18n="hero.h1">เก็บทุกความทรงจำดี ๆ<br>ไว้ในกรอบเดียว</h1>
   <p data-i18n="hero.p">กรอบรูป นาฬิกา แก้ว เสื้อสกรีน — ทำตามสั่งเพื่อคุณโดยเฉพาะ ราคาโรงงาน สั่งง่ายผ่าน LINE</p>
   <a class="btn btn-primary" href="shop.html" data-i18n="hero.shop">ดูสินค้า</a>
-  <a class="btn btn-line" href="#" style="margin-left:10px" data-i18n="hero.line">💬 สั่งผ่าน LINE</a>
+  <a class="btn btn-line" href="#" data-i18n="hero.line">สั่งผ่าน LINE</a>
 </section>
 
 <div class="polas">
-  <a class="pola" href="shop.html#frames"><div class="ph">🖼️</div><div class="cap" data-i18n="pola.frame">กรอบลอย</div></a>
+  <a class="pola" href="shop.html#frames"><div class="ph">🖼</div><div class="cap" data-i18n="pola.frame">กรอบลอย</div></a>
   <a class="pola" href="shop.html#clocks"><div class="ph">🕐</div><div class="cap" data-i18n="pola.clock">นาฬิกากรอบรูป</div></a>
   <a class="pola" href="shop.html#mugs"><div class="ph">☕</div><div class="cap" data-i18n="pola.mug">แก้วสกรีน</div></a>
   <a class="pola" href="shop.html#tees"><div class="ph">👕</div><div class="cap" data-i18n="pola.tee">เสื้อสกรีน</div></a>
@@ -74,7 +67,7 @@
   <h2 data-i18n="best.h2">สินค้าขายดี</h2>
   <div class="sub" data-i18n="best.sub">BEST SELLERS</div>
   <div class="cards">
-    <a class="card" href="shop.html#clocks"><div class="img p34"><img src="img/round-1.jpg?v=3" alt="Round clock 23 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover"><span class="badge" style="background:#e0245e;color:#fff" data-i18n="badge.sale">HOT SALE 🔥</span></div><div class="body"><h3 data-i18n="clround">นาฬิกากลม 23 ซม.</h3><div class="en" data-i18n="clrounds">ทรงกลม แขวนผนัง</div><p data-i18n="clroundd">ใส่รูปโปรดของคุณ ส่งฟรี เก็บเงินปลายทาง</p><span class="price-lg"><span class="cur">฿</span>199</span></div></a>
+    <a class="card" href="shop.html#clocks"><div class="img p34"><img src="img/round-1.jpg?v=3" alt="Round clock 23 cm" loading="lazy" style="width:100%;height:100%;object-fit:cover"><span class="badge" data-i18n="badge.sale">HOT SALE 🔥</span></div><div class="body"><h3 data-i18n="clround">นาฬิกากลม 23 ซม.</h3><div class="en" data-i18n="clrounds">ทรงกลม แขวนผนัง</div><p data-i18n="clroundd">ใส่รูปโปรดของคุณ ส่งฟรี เก็บเงินปลายทาง</p><span class="price-lg"><span class="cur">฿</span>199</span></div></a>
     <a class="card" href="shop.html#clocks"><div class="img p34"><img src="img/c5050-1.jpg?v=3" alt="Clock 50x50 9-photo grid" loading="lazy" style="width:100%;height:100%;object-fit:cover"><span class="badge" data-i18n="badge.gift">ของขวัญยอดฮิต</span></div><div class="body"><h3 data-i18n="cl50">นาฬิกา 50×50 กริด 9 รูป</h3><div class="en" data-i18n="cl50s">ใส่รูปได้ถึง 9 รูป</div><p data-i18n="cl50d">คอลลาจสวยพรีเมียม ส่งฟรีปลายทาง</p><span class="price-lg"><span class="cur">฿</span>499</span></div></a>
     <a class="card" href="shop.html#mugs"><div class="img p34"><img src="img/mug250-1.jpg?v=3" alt="Photo mug" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div><div class="body"><h3 data-i18n="mug250">แก้วกาแฟสกรีนรูป</h3><div class="en" data-i18n="mug250s">เซรามิก + รูปของคุณ</div><p data-i18n="mug250d">สกรีนรูปคนที่คุณรัก คมชัด ทนทาน</p><span class="price-lg"><span class="cur">฿</span>250</span></div></a>
     <a class="card" href="shop.html#tees"><div class="img">👕</div><div class="body"><h3 data-i18n="best.4">เสื้อสกรีน</h3><div class="en">Custom Tee</div><p data-i18n="best.4d">คุณภาพดี ราคาโรงงาน</p><span class="price-lg" style="font-size:18px" data-i18n="price.ask">สอบถามราคา</span></div></a>
@@ -92,11 +85,11 @@
   <div class="mock">
     <div class="up" data-i18n="banner.drop">📤 ลากรูปมาวางที่นี่</div>
     <div class="row">
-      <div class="sw" style="background:#E8A0B4"></div>
-      <div class="sw" style="background:#D4728F"></div>
-      <div class="sw" style="background:#FFDFD0"></div>
-      <div class="sw" style="background:#B3536F"></div>
-      <div class="sw" style="background:#5C4048"></div>
+      <div class="sw" style="background:#C25E7E"></div>
+      <div class="sw" style="background:#C9A86A"></div>
+      <div class="sw" style="background:#FFFFFF"></div>
+      <div class="sw" style="background:#2E2724"></div>
+      <div class="sw" style="background:#F4E6EA"></div>
     </div>
   </div>
 </section>
@@ -105,9 +98,9 @@
   <h2 data-i18n="steps.h2">สั่งง่าย ๆ แค่ 3 ขั้นตอน</h2>
   <div class="sub" data-i18n="steps.sub">HOW TO ORDER</div>
   <div class="steps">
-    <div class="step"><div class="ic">💬</div><h4 data-i18n="step.1">1. ทัก LINE ส่งรูป</h4><p data-i18n="step.1d">ส่งรูปผ่าน LINE หรือ Facebook</p></div>
-    <div class="step"><div class="ic">🎨</div><h4 data-i18n="step.2">2. เลือกแบบ ยืนยันดีไซน์</h4><p data-i18n="step.2d">เลือกสไตล์ ขนาด และยืนยันแบบ</p></div>
-    <div class="step"><div class="ic">📦</div><h4 data-i18n="step.3">3. รับสินค้า</h4><p data-i18n="step.3d">รับที่ร้านพัทยา หรือส่งทั่วประเทศ</p></div>
+    <div class="step"><div class="ic">I</div><h4 data-i18n="step.1">1. ทัก LINE ส่งรูป</h4><p data-i18n="step.1d">ส่งรูปผ่าน LINE หรือ Facebook</p></div>
+    <div class="step"><div class="ic">II</div><h4 data-i18n="step.2">2. เลือกแบบ ยืนยันดีไซน์</h4><p data-i18n="step.2d">เลือกสไตล์ ขนาด และยืนยันแบบ</p></div>
+    <div class="step"><div class="ic">III</div><h4 data-i18n="step.3">3. รับสินค้า</h4><p data-i18n="step.3d">รับที่ร้านพัทยา หรือส่งทั่วประเทศ</p></div>
   </div>
 </section>
 
@@ -169,6 +162,6 @@
 
 <a class="chat" href="#" data-i18n="chat">💬 แชทกับเรา</a>
 
-<script src="i18n.js?v=3"></script>
+<script src="i18n.js?v=5"></script>
 </body>
 </html>
