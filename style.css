@@ -197,3 +197,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
 /* ---------- Toast ---------- */
 .dj-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,26px);background:var(--ink);color:#fff;padding:14px 26px;border-radius:var(--radius-pill);font-size:13.5px;font-weight:300;letter-spacing:.2px;z-index:200;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;box-shadow:0 16px 34px -14px rgba(58,48,44,.6);max-width:88vw;text-align:center}
 .dj-toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- Size selector ---------- */
+.sizes{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.size-btn{border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-pill);padding:7px 14px;font-size:12.5px;color:var(--muted);cursor:pointer;font-family:'IBM Plex Sans Thai',sans-serif;transition:.22s;white-space:nowrap}
+.size-btn:hover{border-color:var(--rose);color:var(--rose-deep)}
+.size-btn.on{background:var(--rose);border-color:var(--rose);color:#fff}
+.price-lg .from{font-size:12px;color:var(--faint);font-weight:400;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:-4px;font-family:'IBM Plex Sans Thai',sans-serif}
+.price-lg.changed{animation:pricePop .35s ease}
+@keyframes pricePop{0%{transform:scale(1)}45%{transform:scale(1.07)}100%{transform:scale(1)}}

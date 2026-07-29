@@ -7,6 +7,7 @@
    ============================================================ */
 const SHOP = {
   LINE_ID: "",                                   // ← вписать, напр. "@djshop"
+  FB_PAGE_ID: "61554799322520",                  // страница DJ Shop
   FB_URL: "https://www.facebook.com/share/19SeNPXHiD/",
   PHONE: "0943427274",
   SITE: "https://djshopframe.com",
@@ -45,7 +46,8 @@ function chatUrl(text) {
       ? `https://line.me/R/oaMessage/@${id}/?${encodeURIComponent(text)}`
       : `https://line.me/R/ti/p/@${id}`;
   }
-  return SHOP.FB_URL;
+  // Messenger не умеет подставлять текст, но m.me открывает диалог сразу
+  return SHOP.FB_PAGE_ID ? `https://m.me/${SHOP.FB_PAGE_ID}` : SHOP.FB_URL;
 }
 
 /* ---------- копирование в буфер ---------- */
@@ -89,6 +91,8 @@ function orderText(card) {
   const price = priceEl ? priceEl.textContent.replace(/\s+/g, " ").trim() : "";
   const qtyEl = card.querySelector(".qty-val");
   const qty = qtyEl ? qtyEl.textContent.trim() : "1";
+  const sizeEl = card.querySelector(".size-btn.on");
+  const size = sizeEl ? sizeEl.dataset.s : "";
   const id = card.id || card.dataset.cat || "";
   const link = `${SHOP.SITE}/shop.html${id ? "#" + id : ""}`;
 
@@ -96,6 +100,7 @@ function orderText(card) {
     t_("hi"),
     "",
     `${t_("item")}: ${name}${sub ? " (" + sub + ")" : ""}`,
+    ...(size ? [`${t_("size")}: ${size}`] : []),
     `${t_("price")}: ${price}`,
     `${t_("qty")}: ${qty} ${t_("pcs")}`,
     `${t_("link")}: ${link}`
@@ -129,6 +134,50 @@ async function goToChat(text) {
   setTimeout(() => window.open(chatUrl(text), "_blank", "noopener"), 350);
 }
 
+/* ---------- селектор размеров: data-sizes='[{"s":"20×60 ซม.","p":299}]' ---------- */
+function addSizeControls(card) {
+  const raw = card.dataset.sizes;
+  if (!raw || card.querySelector(".sizes")) return;
+  let list;
+  try { list = JSON.parse(raw); } catch (e) { return; }
+  if (!Array.isArray(list) || !list.length) return;
+
+  const priceEl = card.querySelector(".price-lg");
+  const box = document.createElement("div");
+  box.className = "sizes";
+  list.forEach((v, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "size-btn";
+    b.dataset.s = v.s;
+    b.dataset.p = v.p;
+    b.textContent = v.s;
+    box.appendChild(b);
+  });
+  priceEl.parentNode.insertBefore(box, priceEl);
+
+  const min = Math.min(...list.map(v => v.p));
+  const fromWord = () => (typeof I18N !== "undefined" && I18N[L()] ? I18N[L()]["price.startAt"] : "from");
+  const render = (price, withFrom) => {
+    priceEl.innerHTML =
+      (withFrom ? `<span class="from">${fromWord()}</span>` : "") +
+      `<span class="cur">฿</span>${price.toLocaleString("en-US")}`;
+    priceEl.classList.remove("changed");
+    void priceEl.offsetWidth;
+    priceEl.classList.add("changed");
+  };
+  render(min, true);
+
+  box.addEventListener("click", e => {
+    const b = e.target.closest(".size-btn");
+    if (!b) return;
+    e.preventDefault();
+    box.querySelectorAll(".size-btn").forEach(x => x.classList.remove("on"));
+    b.classList.add("on");
+    render(Number(b.dataset.p), false);
+  });
+}
+
 /* ---------- счётчик количества в карточке ---------- */
 function addQtyControls(card) {
   const buy = card.querySelector(".btn-buy");
@@ -153,6 +202,7 @@ function addQtyControls(card) {
 document.addEventListener("DOMContentLoaded", () => {
   /* 1. карточки товаров: счётчик + кнопка заказа */
   document.querySelectorAll(".card").forEach(card => {
+    addSizeControls(card);
     if (card.querySelector(".btn-buy")) addQtyControls(card);
   });
   document.querySelectorAll(".btn-buy").forEach(btn => {
