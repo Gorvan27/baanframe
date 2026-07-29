@@ -67,7 +67,11 @@ const I18N = {
     "st.prev": "ตัวอย่าง · Live preview",
     "st.ph": "รูปของคุณจะแสดงที่นี่",
     "st.note": "ตัวอย่างเบื้องต้น — ทีมงานจะยืนยันแบบจริงก่อนผลิตทุกครั้ง 💕",
-    "st.alert": "ในเวอร์ชันจริง: ระบบจะส่งรูป + สไตล์ + ขนาดที่เลือกไปที่ LINE ของร้านโดยอัตโนมัติ 💚"
+    "st.alert": "ในเวอร์ชันจริง: ระบบจะส่งรูป + สไตล์ + ขนาดที่เลือกไปที่ LINE ของร้านโดยอัตโนมัติ",
+    "ai.badge": "เร็ว ๆ นี้", "ai.h": "AI Design Studio",
+    "ai.p": "ให้ AI เปลี่ยนรูปของคุณเป็นงานศิลป์ — สไตล์การ์ตูน สีน้ำ วินเทจ แล้วใส่กรอบได้ทันที เจ้าแรกในไทย",
+    "ai.b1": "เปลี่ยนสไตล์ภาพด้วย AI", "ai.b2": "ดูตัวอย่างก่อนสั่งผลิต", "ai.b3": "ออกแบบเองได้ในไม่กี่วินาที",
+    "ai.cta": "อยากลองก่อนใคร? ทักไลน์เลย", "ai.note": "แจ้งความสนใจไว้ เราจะติดต่อกลับทันทีที่เปิดใช้งาน"
   },
   en: {
     topbar: "Frames · Clocks · Mugs · Tees — factory prices, Pattaya",
@@ -136,7 +140,11 @@ const I18N = {
     "st.prev": "Live preview",
     "st.ph": "Your photo appears here",
     "st.note": "Rough preview — we always confirm the final design before production 💕",
-    "st.alert": "In the live version this sends your photo + style + size straight to our LINE 💚"
+    "st.alert": "In the live version this sends your photo + style + size straight to our LINE",
+    "ai.badge": "Coming soon", "ai.h": "AI Design Studio",
+    "ai.p": "Let AI restyle your photo — cartoon, watercolour, vintage — then frame it instantly. First in Thailand.",
+    "ai.b1": "Restyle photos with AI", "ai.b2": "Preview before you order", "ai.b3": "Design your own in seconds",
+    "ai.cta": "Want early access? Message us", "ai.note": "Tell us you're interested — we'll ping you the moment it opens"
   }
 };
 
