@@ -135,7 +135,10 @@ footer a:hover{opacity:.7}
 .studio{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:38px;box-shadow:0 14px 34px -24px rgba(58,48,44,.22)}
 .panel h3{font-family:'Trirong',serif;color:var(--ink);font-size:23px;margin-bottom:22px;font-weight:500}
-.drop{border:1.5px dashed var(--rose);border-radius:18px;padding:42px 22px;text-align:center;color:var(--muted);font-size:14px;background:var(--rose-soft);cursor:pointer;transition:.25s;font-weight:300}
+.drop{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1.5px dashed var(--rose);border-radius:18px;padding:44px 24px;text-align:center;color:var(--muted);font-size:14px;background:var(--rose-soft);cursor:pointer;transition:.25s;font-weight:300;min-height:150px;margin:0 0 4px}
+.drop::before{content:"";width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--rose);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D07E97' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M12 16V5m0 0L7.5 9.5M12 5l4.5 4.5'/%3E%3Cpath d='M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:20px;transition:.25s}
+.drop:hover::before{transform:translateY(-3px)}
+.drop.dragover{background:#f2dbe1;border-color:var(--rose-deep)}
 .drop:hover{background:#f2dbe1}
 .opt-title{font-family:'IBM Plex Sans Thai',sans-serif;font-size:11px;letter-spacing:1.5px;color:var(--faint);margin:28px 0 12px;text-transform:uppercase;font-weight:500}
 .chipset{display:flex;gap:10px;flex-wrap:wrap}

@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#D07E97">
 <link href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Thai:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -148,9 +148,9 @@ function show(f){
   r.readAsDataURL(f);
 }
 file.addEventListener('change',()=>show(file.files[0]));
-drop.addEventListener('dragover',e=>{e.preventDefault();drop.style.background='#fbe3ea';});
-drop.addEventListener('dragleave',()=>drop.style.background='');
-drop.addEventListener('drop',e=>{e.preventDefault();drop.style.background='';show(e.dataTransfer.files[0]);});
+drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('dragover');});
+drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));
+drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('dragover');show(e.dataTransfer.files[0]);});
 
 document.querySelectorAll('#styles .chip').forEach(c=>c.addEventListener('click',()=>{
   document.querySelectorAll('#styles .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');
