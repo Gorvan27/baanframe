@@ -10,8 +10,8 @@ const SHOP = {
   FB_PAGE_ID: "61554799322520",                  // страница DJ Shop
   FB_URL: "https://www.facebook.com/share/19SeNPXHiD/",
   PHONE: "0943427274",
-  // Пока домен djshopframe.com не куплен — ссылки в заказе ведут на рабочий адрес.
-  // После покупки домена вернуть "https://djshopframe.com"
+  // Пока домен pattayacustomprint.com не куплен — ссылки в заказе ведут на рабочий адрес.
+  // После покупки домена вернуть "https://pattayacustomprint.com"
   SITE: "https://gorvan27.github.io/baanframe",
   MAIL_USER: "danitaseenark",
   MAIL_HOST: "gmail.com"

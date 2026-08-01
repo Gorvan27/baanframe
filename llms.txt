@@ -15,9 +15,9 @@
 
 ## Страницы
 
-- [Главная](https://djshopframe.com/): о мастерской, хиты продаж, отзывы Google, FAQ, карта и контакты
-- [Каталог](https://djshopframe.com/shop.html): все товары с ценами, фильтры по категориям, заказ в один клик через LINE
-- [Design Studio](https://djshopframe.com/studio.html): загрузка фото, подбор рамки и паспарту, предпросмотр макета
+- [Главная](https://pattayacustomprint.com/): о мастерской, хиты продаж, отзывы Google, FAQ, карта и контакты
+- [Каталог](https://pattayacustomprint.com/shop.html): все товары с ценами, фильтры по категориям, заказ в один клик через LINE
+- [Design Studio](https://pattayacustomprint.com/studio.html): загрузка фото, подбор рамки и паспарту, предпросмотр макета
 
 ## Цены (бат, заводские)
 

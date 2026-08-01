@@ -1,7 +1,7 @@
 /* DJ Shop — переключатель языков TH/EN (тайский по умолчанию) */
 const I18N = {
   th: {
-    topbar: "กรอบรูป · นาฬิกา · แก้ว · เสื้อสกรีน — ราคาโรงงาน",
+    topbar: "นาฬิกา · แก้ว · เสื้อสกรีน — สั่งทำจากรูปของคุณ ราคาโรงงาน",
     "nav.home": "หน้าแรก", "nav.shop": "สินค้า", "nav.studio": "Design Studio",
     "nav.reviews": "รีวิว", "nav.contact": "ติดต่อ", "nav.order": "สั่งทำเลย",
     chat: "แชทกับเรา",
@@ -61,7 +61,7 @@ const I18N = {
     "mug799": "แก้วเก็บความเย็น/ร้อน", "mug799s": "สแตนเลส 304 · 8 ชม.", "mug799d": "Tumbler เก็บอุณหภูมิ 8 ชั่วโมง ไร้สาร BPA",
     "shop.note": "ราคาจะอัปเดตเร็ว ๆ นี้ — สอบถามได้ทาง LINE",
     "shop.line": "สอบถามทาง LINE", "shop.studio": "ออกแบบเองใน Studio",
-    "st.h2": "ออกแบบกรอบในแบบของคุณ", "st.sub": "อัปโหลดรูป → เลือกกรอบและสี → เห็นตัวอย่างทันที",
+    "st.h2": "ออกแบบสินค้าในแบบของคุณ", "st.sub": "อัปโหลดรูป → เลือกกรอบและสี → เห็นตัวอย่างทันที",
     "st.1": "1. อัปโหลดรูปของคุณ",
     "st.drop": "แตะเพื่อเลือกรูป หรือลากมาวางที่นี่",
     "st.2": "2. เลือกสไตล์กรอบ", "st.3": "3. สีขอบใน (พาสปาร์ตู)", "st.4": "4. ขนาด",
@@ -78,7 +78,7 @@ const I18N = {
     "ai.cta": "อยากลองก่อนใคร? ทักไลน์เลย", "ai.note": "แจ้งความสนใจไว้ เราจะติดต่อกลับทันทีที่เปิดใช้งาน"
   },
   en: {
-    topbar: "Frames · Clocks · Mugs · Tees — factory prices, Pattaya",
+    topbar: "Clocks · Mugs · Tees — custom printed from your photo, Pattaya",
     "nav.home": "Home", "nav.shop": "Shop", "nav.studio": "Design Studio",
     "nav.reviews": "Reviews", "nav.contact": "Contact", "nav.order": "Order now",
     chat: "Chat with us",
