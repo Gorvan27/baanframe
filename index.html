@@ -245,7 +245,7 @@ const QP = [
   {k:"mug250",   p:250, img:"img/mug250-1.jpg", cat:"mugs",   photos:["one","many"], tier:"low"},
   {k:"mug799",   p:799, img:"img/mug799-1.jpg", cat:"mugs",   photos:["one","many"], tier:"high"}
 ];
-const T = k => (typeof I18N!=="undefined" && I18N[window.DJLANG||"th"] && I18N[window.DJLANG||"th"][k]) || k;
+const qT = k => (typeof I18N!=="undefined" && I18N[window.DJLANG||"th"] && I18N[window.DJLANG||"th"][k]) || k;
 
 const qbody=document.getElementById("qbody"), qbar=document.getElementById("qbar");
 let qState={};
@@ -261,35 +261,35 @@ function qRender(title,hint,opts,progress,back){
   qbody.innerHTML=`<div class="q-title">${title}</div><div class="q-hint">${hint||""}</div>`;
   const box=document.createElement("div"); box.className="q-opts";
   opts.forEach(o=>box.appendChild(o)); qbody.appendChild(box);
-  if(back){const b=document.createElement("button");b.type="button";b.className="q-back";b.textContent="← "+T("quiz.back");b.onclick=back;qbody.appendChild(b);}
+  if(back){const b=document.createElement("button");b.type="button";b.className="q-back";b.textContent="← "+qT("quiz.back");b.onclick=back;qbody.appendChild(b);}
   qbody.scrollIntoView({block:"nearest",behavior:"smooth"});
 }
 
 /* Шаг 1 — что делаем */
 function qStep1(){
   qState={};
-  qRender(T("quiz.q1"), T("quiz.q1h"), [
-    qOpt("🕐", T("quiz.a.clock"), T("quiz.a.clockh"), ()=>{qState.cat="clocks";qStep2();}),
-    qOpt("☕", T("quiz.a.mug"),   T("quiz.a.mugh"),   ()=>{qState.cat="mugs";qResult(QP.filter(x=>x.cat==="mugs"));}),
-    qOpt("👕", T("quiz.a.shirt"), T("quiz.a.shirth"), ()=>qCustom("shirt")),
-    qOpt("🎁", T("quiz.a.all"),   T("quiz.a.allh"),   ()=>qResult(QP.slice()))
+  qRender(qT("quiz.q1"), qT("quiz.q1h"), [
+    qOpt("🕐", qT("quiz.a.clock"), qT("quiz.a.clockh"), ()=>{qState.cat="clocks";qStep2();}),
+    qOpt("☕", qT("quiz.a.mug"),   qT("quiz.a.mugh"),   ()=>{qState.cat="mugs";qResult(QP.filter(x=>x.cat==="mugs"));}),
+    qOpt("👕", qT("quiz.a.shirt"), qT("quiz.a.shirth"), ()=>qCustom("shirt")),
+    qOpt("🎁", qT("quiz.a.all"),   qT("quiz.a.allh"),   ()=>qResult(QP.slice()))
   ], 33, null);
 }
 /* Шаг 2 — сколько фото */
 function qStep2(){
-  qRender(T("quiz.q2"), T("quiz.q2h"), [
-    qOpt("🖼", T("quiz.a.one"),  T("quiz.a.oneh"),  ()=>{qState.photos="one";qStep3();}),
-    qOpt("🧩", T("quiz.a.many"), T("quiz.a.manyh"), ()=>{qState.photos="many";qStep3();}),
-    qOpt("🤔", T("quiz.a.dunno"),"",                ()=>{qState.photos=null;qStep3();})
+  qRender(qT("quiz.q2"), qT("quiz.q2h"), [
+    qOpt("🖼", qT("quiz.a.one"),  qT("quiz.a.oneh"),  ()=>{qState.photos="one";qStep3();}),
+    qOpt("🧩", qT("quiz.a.many"), qT("quiz.a.manyh"), ()=>{qState.photos="many";qStep3();}),
+    qOpt("🤔", qT("quiz.a.dunno"),"",                ()=>{qState.photos=null;qStep3();})
   ], 66, qStep1);
 }
 /* Шаг 3 — бюджет */
 function qStep3(){
-  qRender(T("quiz.q3"), T("quiz.q3h"), [
-    qOpt("💗", "≤ ฿299",     T("quiz.a.low"),  ()=>qFinish("low")),
-    qOpt("💜", "฿300–599",   T("quiz.a.mid"),  ()=>qFinish("mid")),
-    qOpt("👑", "฿600+",      T("quiz.a.high"), ()=>qFinish("high")),
-    qOpt("👀", T("quiz.a.any"),"",             ()=>qFinish(null))
+  qRender(qT("quiz.q3"), qT("quiz.q3h"), [
+    qOpt("💗", "≤ ฿299",     qT("quiz.a.low"),  ()=>qFinish("low")),
+    qOpt("💜", "฿300–599",   qT("quiz.a.mid"),  ()=>qFinish("mid")),
+    qOpt("👑", "฿600+",      qT("quiz.a.high"), ()=>qFinish("high")),
+    qOpt("👀", qT("quiz.a.any"),"",             ()=>qFinish(null))
   ], 100, qStep2);
 }
 function qFinish(tier){
@@ -303,13 +303,13 @@ function qFinish(tier){
 function qCard(x){
   const d=document.createElement("div"); d.className="card"; d.dataset.cat=x.cat;
   const img = x.img
-    ? `<div class="img p34"><img src="${x.img}?v=3" alt="${T(x.k)}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>`
+    ? `<div class="img p34"><img src="${x.img}?v=3" alt="${qT(x.k)}" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>`
     : `<div class="img" style="background:linear-gradient(150deg,#f3c3d2,#d795ab);display:flex;align-items:center;justify-content:center;font-size:40px">🧸</div>`;
   d.innerHTML = img +
-    `<div class="body"><h3 data-i18n="${x.k}">${T(x.k)}</h3>` +
-    `<div class="en" data-i18n="${x.k}s">${T(x.k+"s")}</div>` +
+    `<div class="body"><h3 data-i18n="${x.k}">${qT(x.k)}</h3>` +
+    `<div class="en" data-i18n="${x.k}s">${qT(x.k+"s")}</div>` +
     `<span class="price-lg"><span class="cur">฿</span>${x.p}</span>` +
-    `<a class="btn btn-buy" href="#" data-i18n="btn.buy">${T("btn.buy")}</a></div>`;
+    `<a class="btn btn-buy" href="#" data-i18n="btn.buy">${qT("btn.buy")}</a></div>`;
   const buy=d.querySelector(".btn-buy");
   buy.setAttribute("rel","noopener noreferrer");
   buy.addEventListener("click",e=>{e.preventDefault();
@@ -319,27 +319,27 @@ function qCard(x){
 }
 function qResult(list){
   qbar.style.width="100%";
-  qbody.innerHTML=`<div class="q-res-head">${T("quiz.res")}</div><div class="q-res-sub">${T("quiz.ressub")}</div>`;
+  qbody.innerHTML=`<div class="q-res-head">${qT("quiz.res")}</div><div class="q-res-sub">${qT("quiz.ressub")}</div>`;
   const g=document.createElement("div"); g.className="q-cards";
   list.forEach(x=>g.appendChild(qCard(x))); qbody.appendChild(g);
   const f=document.createElement("div"); f.className="q-again";
   const again=document.createElement("button");
-  again.type="button"; again.className="btn btn-ghost"; again.textContent=T("quiz.again"); again.onclick=qStep1;
+  again.type="button"; again.className="btn btn-ghost"; again.textContent=qT("quiz.again"); again.onclick=qStep1;
   const all=document.createElement("a");
-  all.className="btn btn-ghost"; all.href="shop.html"; all.textContent=T("quiz.all");
+  all.className="btn btn-ghost"; all.href="shop.html"; all.textContent=qT("quiz.all");
   f.appendChild(again); f.appendChild(all); qbody.appendChild(f);
   qbody.scrollIntoView({block:"nearest",behavior:"smooth"});
 }
 /* Ветка «нет в каталоге» — сразу в LINE */
 function qCustom(kind){
   qbar.style.width="100%";
-  qbody.innerHTML=`<div class="q-res-head">${T("quiz.custom")}</div><div class="q-res-sub">${T("quiz.customsub")}</div>`;
+  qbody.innerHTML=`<div class="q-res-head">${qT("quiz.custom")}</div><div class="q-res-sub">${qT("quiz.customsub")}</div>`;
   const f=document.createElement("div"); f.className="q-again";
   const a=document.createElement("a"); a.className="btn btn-line";
   a.href = (typeof chatUrl==="function") ? chatUrl("") : "#";
-  a.target="_blank"; a.rel="noopener noreferrer"; a.textContent=T("quiz.ask");
+  a.target="_blank"; a.rel="noopener noreferrer"; a.textContent=qT("quiz.ask");
   const back=document.createElement("button");
-  back.type="button"; back.className="btn btn-ghost"; back.textContent=T("quiz.again"); back.onclick=qStep1;
+  back.type="button"; back.className="btn btn-ghost"; back.textContent=qT("quiz.again"); back.onclick=qStep1;
   f.appendChild(a); f.appendChild(back); qbody.appendChild(f);
 }
 qStep1();
