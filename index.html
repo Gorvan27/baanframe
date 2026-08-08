@@ -220,7 +220,7 @@
 
 <a class="chat" href="#" data-i18n="chat">💬 แชทกับเรา</a>
 
-<script src="i18n.js?v=12"></script>
+<script src="i18n.js?v=13"></script>
 <script src="order.js?v=7"></script>
 <script>
 /* ---------- QUIZ: подбор товара ---------- */
@@ -332,8 +332,12 @@ function qCustom(kind){
   back.type="button"; back.className="btn btn-ghost"; back.textContent=qT("quiz.again"); back.onclick=qStep1;
   f.appendChild(a); f.appendChild(back); qbody.appendChild(f);
 }
-qStep1();
-document.querySelectorAll(".langsw button").forEach(b=>b.addEventListener("click",()=>setTimeout(qStep1,60)));
+/* язык ставится в i18n.js на DOMContentLoaded — рендерим квиз только после этого */
+function qBoot(){
+  qStep1();
+  document.querySelectorAll(".langsw button").forEach(b=>b.addEventListener("click",()=>setTimeout(qStep1,60)));
+}
+if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",qBoot);}else{qBoot();}
 </script>
 
 </body>
