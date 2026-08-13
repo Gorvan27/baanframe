@@ -259,3 +259,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offse
   .q-opt{padding:18px 10px;font-size:14px}
   .q-cards{grid-template-columns:1fr 1fr;gap:12px}
 }
+
+/* плейсхолдеры карточек без фото */
+.clk-art{background:linear-gradient(145deg,#FDF2F6 0%,#F7E3EB 52%,#FFF9FB 100%)!important;isolation:isolate}
+.frm-art{background:linear-gradient(145deg,#FBF6EF 0%,#F3E7D6 52%,#FFFCF7 100%)!important;isolation:isolate}
+.clk-art::before,.frm-art::before{content:"";position:absolute;width:66%;aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.8);box-shadow:0 24px 48px -28px rgba(185,95,124,.5)}
+.clk-art .tee-icon,.frm-art .tee-icon{position:relative;z-index:1;font-size:74px;line-height:1;filter:drop-shadow(0 16px 13px rgba(90,60,70,.15))}

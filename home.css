@@ -1,0 +1,249 @@
+/* ============================================================
+   DJ Shop — single-screen quiz landing
+   Inspired by quiz-site patterns: one question, visible progress,
+   visual answers, branching and one clear result.
+   ============================================================ */
+
+.home-html{height:100%;overflow:hidden}
+body.home-page{
+  min-height:100svh;
+  height:100svh;
+  overflow:hidden;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(208,126,151,.13),transparent 27%),
+    radial-gradient(circle at 88% 82%,rgba(201,168,106,.11),transparent 24%),
+    var(--bg);
+}
+
+.home-header{
+  position:relative;
+  top:auto;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:28px;
+  align-items:center;
+  min-height:76px;
+  padding:14px clamp(18px,5vw,72px);
+  background:rgba(251,247,244,.9);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(18px);
+}
+.home-header .logo{white-space:nowrap}
+.home-nav{
+  position:static;
+  inset:auto;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+.home-nav a{
+  margin:0;
+  padding:9px 15px;
+  border-radius:var(--radius-pill);
+  color:var(--muted);
+  font-size:13.5px;
+  font-weight:400;
+  white-space:nowrap;
+}
+.home-nav a:hover,.home-nav a:focus-visible{color:var(--rose-deep);background:var(--rose-soft)}
+.home-actions{display:flex;align-items:center;gap:10px}
+.home-actions .langsw{margin:0}
+.home-line{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:8px 17px;
+  border-radius:var(--radius-pill);
+  background:var(--line-green);
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  box-shadow:0 10px 22px -13px rgba(6,199,85,.9);
+}
+.home-line:hover{filter:brightness(.95);transform:translateY(-1px)}
+
+.home-main{min-height:0;display:grid;place-items:center;padding:clamp(12px,2.5vh,28px) clamp(12px,4vw,54px)}
+.home-stage{width:min(940px,100%);display:grid;gap:clamp(10px,1.7vh,18px);min-height:0}
+.home-intro{text-align:center}
+.home-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--rose-deep);
+  font-size:10px;
+  letter-spacing:2.6px;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.home-tag::before,.home-tag::after{content:"";width:22px;height:1px;background:var(--rose);opacity:.65}
+.home-intro h1{
+  margin:5px 0 1px;
+  color:var(--ink);
+  font-family:'Trirong',serif;
+  font-size:clamp(30px,4.4vh,44px);
+  line-height:1.23;
+  font-weight:400;
+}
+.home-intro p{color:var(--muted);font-size:clamp(13px,1.75vh,15px);line-height:1.65}
+
+.home-quiz{
+  width:100%;
+  min-height:0;
+  padding:clamp(18px,2.6vh,28px) clamp(16px,3vw,34px) clamp(16px,2.3vh,24px);
+  background:rgba(255,255,255,.94);
+  border:1px solid rgba(224,207,197,.85);
+  border-radius:30px;
+  box-shadow:0 28px 70px -42px rgba(58,48,44,.55);
+  overflow:hidden;
+}
+.home-quiz-meta{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;margin-bottom:clamp(13px,2vh,20px)}
+.home-step,.home-time{font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--faint);font-weight:500;white-space:nowrap}
+.home-progress{height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+.home-progress i{display:block;width:33%;height:100%;background:linear-gradient(90deg,var(--rose),var(--rose-deep));border-radius:inherit;transition:width .38s cubic-bezier(.2,.7,.3,1)}
+.home-qbody{min-height:0;text-align:center}
+.home-qtitle{font-family:'Trirong',serif;color:var(--ink);font-size:clamp(21px,2.8vh,27px);font-weight:500;line-height:1.35}
+.home-qhint{min-height:22px;margin:2px 0 clamp(10px,1.8vh,18px);color:var(--muted);font-size:12.5px;line-height:1.65}
+.home-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.home-option{
+  position:relative;
+  min-height:clamp(112px,17vh,146px);
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:var(--rose-soft);
+  color:var(--ink);
+  cursor:pointer;
+  font-family:inherit;
+  text-align:left;
+  isolation:isolate;
+  transition:border-color .25s,transform .25s,box-shadow .25s;
+}
+.home-option::after{content:"";position:absolute;inset:38% 0 0;z-index:-1;background:linear-gradient(transparent,rgba(45,34,31,.8))}
+.home-option:hover{border-color:var(--rose);transform:translateY(-3px);box-shadow:0 16px 28px -21px rgba(58,48,44,.6)}
+.home-option:active{transform:translateY(0)}
+.home-option img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .45s ease}
+.home-option:hover img{transform:scale(1.04)}
+.home-option-copy{position:absolute;inset:auto 13px 12px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.home-option-copy b{display:block;font-size:14.5px;font-weight:500;line-height:1.35}
+.home-option-copy small{display:block;margin-top:2px;font-size:11.5px;line-height:1.4;opacity:.86;font-weight:300}
+.home-option.is-plain{display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,var(--rose-soft),#f4dbe3)}
+.home-option.is-plain::after{display:none}
+.home-option.is-plain .home-option-copy{position:static;color:var(--ink);text-shadow:none;padding:12px}
+.home-option-icon{display:block;margin-bottom:7px;font-size:34px;line-height:1}
+.home-back{
+  margin-top:12px;
+  padding:5px 10px;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-family:inherit;
+  font-size:12.5px;
+  cursor:pointer;
+}
+.home-back:hover{color:var(--rose-deep)}
+
+.home-result{
+  width:min(620px,100%);
+  margin:8px auto 0;
+  display:grid;
+  grid-template-columns:132px minmax(0,1fr);
+  gap:22px;
+  align-items:center;
+  text-align:left;
+}
+.home-result-media{aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:var(--rose-soft);display:grid;place-items:center;font-size:52px}
+.home-result-media img{width:100%;height:100%;object-fit:cover}
+.home-result-kicker{color:var(--rose-deep);font-size:10px;letter-spacing:1.7px;text-transform:uppercase;font-weight:500}
+.home-result h2{margin:4px 0 2px;font-family:'Trirong',serif;font-size:24px;line-height:1.3;font-weight:500}
+.home-result-sub{color:var(--muted);font-size:12px}
+.home-result-price{display:block;margin:7px 0 9px;font-family:'Trirong',serif;font-size:25px;font-weight:500;color:var(--ink)}
+.home-result-actions{display:flex;gap:8px;flex-wrap:wrap}
+.home-result-actions .btn{padding:10px 18px;font-size:12.5px}
+.home-result-note{margin-top:7px;color:var(--faint);font-size:10.5px;line-height:1.4}
+
+.home-contact{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:clamp(12px,3vw,34px);
+  min-height:56px;
+  padding:9px clamp(14px,4vw,54px);
+  border-top:1px solid var(--line);
+  background:rgba(255,255,255,.62);
+  color:var(--muted);
+  font-size:11.5px;
+  line-height:1.35;
+}
+.home-contact a,.home-contact span{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.home-contact a:hover{color:var(--rose-deep)}
+.home-contact-icon{color:var(--rose-deep);font-size:13px}
+
+@media(max-width:760px){
+  .home-header{grid-template-columns:auto 1fr auto;gap:8px;min-height:64px;padding:10px 12px}
+  .home-header .logo{font-size:20px}
+  .home-header .logo small{display:none}
+  .home-nav{justify-content:flex-end;gap:2px}
+  .home-nav a{padding:7px 8px;font-size:11.5px}
+  .home-actions{gap:5px}
+  .home-actions .langsw{padding:2px}
+  .home-actions .langsw button{padding:5px 7px;font-size:10.5px}
+  .home-line{min-height:32px;padding:6px 10px;font-size:11px}
+  .home-main{padding:10px}
+  .home-stage{gap:8px}
+  .home-tag{font-size:8.5px;letter-spacing:1.8px}
+  .home-tag::before,.home-tag::after{width:14px}
+  .home-intro h1{font-size:27px;line-height:1.28;margin-top:2px}
+  .home-intro p{font-size:12px;line-height:1.55}
+  .home-quiz{padding:16px 13px 13px;border-radius:22px}
+  .home-quiz-meta{grid-template-columns:auto 1fr;gap:9px;margin-bottom:11px}
+  .home-time{display:none}
+  .home-step{font-size:9px}
+  .home-qtitle{font-size:20px}
+  .home-qhint{margin:1px 0 9px;font-size:11.5px;min-height:19px}
+  .home-options{grid-template-columns:1fr 1fr;gap:8px}
+  .home-option{min-height:112px;border-radius:16px}
+  .home-option-copy{inset:auto 10px 9px}
+  .home-option-copy b{font-size:13px}
+  .home-option-copy small{font-size:10.5px}
+  .home-option-icon{font-size:29px}
+  .home-back{margin-top:7px;padding:3px 8px;font-size:11.5px}
+  .home-result{grid-template-columns:98px minmax(0,1fr);gap:14px;margin-top:2px}
+  .home-result-media{border-radius:14px}
+  .home-result h2{font-size:20px}
+  .home-result-price{font-size:21px;margin:4px 0 7px}
+  .home-result-actions .btn{padding:8px 13px;font-size:11.5px}
+  .home-contact{min-height:51px;gap:18px;padding:7px 10px;font-size:10.5px}
+  .home-contact .contact-address,.home-contact .contact-hours-long{display:none}
+}
+
+@media(max-width:420px){
+  .home-header{gap:5px;padding-left:9px;padding-right:9px}
+  .home-header .logo{font-size:18px}
+  .home-nav a{padding:6px 5px;font-size:10.5px}
+  .home-actions{gap:3px}
+  .home-actions .langsw button{padding:5px 6px;font-size:9.5px}
+  .home-line{padding:6px 8px;font-size:10px}
+  .home-contact{gap:10px;font-size:10px}
+}
+
+@media(max-height:720px){
+  .home-header{min-height:58px;padding-top:8px;padding-bottom:8px}
+  .home-main{padding-top:6px;padding-bottom:6px}
+  .home-intro h1{font-size:24px}
+  .home-intro p{display:none}
+  .home-quiz{padding-top:13px;padding-bottom:10px}
+  .home-option{min-height:96px}
+  .home-contact{min-height:44px;padding-top:5px;padding-bottom:5px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .home-progress i,.home-option,.home-option img,.home-line{transition:none}
+}
