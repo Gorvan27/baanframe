@@ -106,20 +106,21 @@
   };
 
   const products = {
-    clround:{name:"clround",sub:"clrounds",price:199,img:"img/round-1.jpg"},
-    cl2040:{name:"cl2040",sub:"cl2040s",price:199,img:"",icon:"🕐"},
+    clround:{name:"clround",sub:"clrounds",price:199,img:"img/clround-1.jpg"},
+    cl2040:{name:"cl2040",sub:"cl2040s",price:199,img:"img/cl2040-1.jpg",icon:"🕐"},
     clA4:{name:"clA4",sub:"clA4s",price:199,img:"",icon:"🖼"},
-    cl20:{name:"cl20",sub:"cl20s",price:299,img:"img/c2060-1.jpg"},
-    cl40:{name:"cl40",sub:"cl40s",price:299,img:"img/c4040-1.jpg"},
-    cl30:{name:"cl30",sub:"cl30s",price:299,img:"img/bear30-1.jpg"},
-    clbear40:{name:"clbear40",sub:"clbear40s",price:399,img:"",icon:"🧸"},
-    clsq3040:{name:"clsq3040",sub:"clsq3040s",price:399,img:"",icon:"▣"},
-    cl50:{name:"cl50",sub:"cl50s",price:499,img:"img/c5050-1.jpg"},
-    cldigi:{name:"cldigi",sub:"cldigis",price:499,img:"",icon:"🔢"},
-    clcal4060:{name:"clcal4060",sub:"clcal4060s",price:599,img:"",icon:"🗓"},
-    cl60:{name:"cl60",sub:"cl60s",price:799,img:"img/c6060-1.jpg"},
-    cl6080:{name:"cl6080",sub:"cl6080s",price:999,img:"",icon:"⏱"},
-    frame6080:{name:"frame6080",sub:"frame6080s",price:599,img:"",icon:"🖼"},
+    cl20:{name:"cl20",sub:"cl20s",price:299,img:"img/cl20-1.jpg"},
+    cl40:{name:"cl40",sub:"cl40s",price:299,img:"img/cl40-1.jpg"},
+    cl30:{name:"cl30",sub:"cl30s",price:299,img:"img/cl30-1.jpg"},
+    clbear40:{name:"clbear40",sub:"clbear40s",price:399,img:"img/clbear40-1.jpg",icon:"🧸"},
+    clsq3040:{name:"clsq3040",sub:"clsq3040s",price:399,img:"img/clsq3040-1.jpg",icon:"▣"},
+    cl50:{name:"cl50",sub:"cl50s",price:499,img:"img/cl50-1.jpg"},
+    cldigi:{name:"cldigi",sub:"cldigis",price:499,img:"img/cldigi-1.jpg",icon:"🔢"},
+    clcal4060:{name:"clcal4060",sub:"clcal4060s",price:599,img:"img/clcal4060-1.jpg",icon:"🗓"},
+    cl60:{name:"cl60",sub:"cl60s",price:799,img:"img/cl60-1.jpg"},
+    cl60sq:{name:"cl60sq",sub:"cl60sqs",price:799,img:"img/cl60sq-1.jpg"},
+    cl6080:{name:"cl6080",sub:"cl6080s",price:999,img:"img/cl6080-1.jpg",icon:"⏱"},
+    frame6080:{name:"frame6080",sub:"frame6080s",price:599,img:"img/frame6080-1.jpg",icon:"🖼"},
     mug250:{name:"mug250",sub:"mug250s",price:250,img:"img/mug250-1.jpg"},
     mug799:{name:"mug799",sub:"mug799s",price:799,img:"img/mug799-1.jpg"},
     shirt:{name:"q.shirt",sub:"result.quoteSub",price:null,img:"",icon:"👕"}
@@ -184,33 +185,33 @@
     Object.keys(state).forEach(key => { state[key]=key==="answers" ? [] : ""; });
     emit("start");
     renderQuestion(1,"q.1","q.1h",[
-      {key:"q.clock",hint:"q.clockh",img:"img/round-1.jpg",value:"clock",action:()=>{answer("category","clock","q.clock");clockPhotos();}},
+      {key:"q.clock",hint:"q.clockh",img:"img/clround-1.jpg",value:"clock",action:()=>{answer("category","clock","q.clock");clockPhotos();}},
       {key:"q.mug",hint:"q.mugh",img:"img/mug250-1.jpg",value:"mug",action:()=>{answer("category","mug","q.mug");mugType();}},
       {key:"q.shirt",hint:"q.shirth",icon:"👕",value:"shirt",action:()=>{answer("category","shirt","q.shirt");shirtQuantity();}},
       {key:"q.frame",hint:"q.frameh",icon:"🖼",value:"frame",action:()=>{answer("category","frame","q.frame");showResult("frame6080");}},
-      {key:"q.unsure",hint:"q.unsureh",img:"img/c5050-1.jpg",value:"unsure",action:()=>{answer("category","unsure","q.unsure");occasion();}}
+      {key:"q.unsure",hint:"q.unsureh",img:"img/cl50-1.jpg",value:"unsure",action:()=>{answer("category","unsure","q.unsure");occasion();}}
     ],null);
   }
 
   function clockPhotos(){
     renderQuestion(2,"clock.2","clock.2h",[
-      {key:"clock.one",hint:"clock.oneh",img:"img/round-1.jpg",value:"one",action:()=>{answer("photos","one","clock.one");clockBudget();}},
-      {key:"clock.many",hint:"clock.manyh",img:"img/c5050-1.jpg",value:"many",action:()=>{answer("photos","many","clock.many");clockBudget();}},
+      {key:"clock.one",hint:"clock.oneh",img:"img/clround-1.jpg",value:"one",action:()=>{answer("photos","one","clock.one");clockBudget();}},
+      {key:"clock.many",hint:"clock.manyh",img:"img/cl50-1.jpg",value:"many",action:()=>{answer("photos","many","clock.many");clockBudget();}},
       {key:"common.unsure",hint:"common.unsureh",icon:"✨",value:"any",action:()=>{answer("photos","any","common.unsure");clockBudget();}}
     ],start);
   }
 
   function clockBudget(){
     renderQuestion(3,"clock.3","clock.3h",[
-      {key:"budget.low",hint:"budget.lowh",img:"img/round-1.jpg",value:"low",action:()=>{answer("budget","low","budget.low");showResult(pickClock());}},
-      {key:"budget.mid",hint:"budget.midh",img:"img/c5050-1.jpg",value:"mid",action:()=>{answer("budget","mid","budget.mid");showResult(pickClock());}},
-      {key:"budget.high",hint:"budget.highh",img:"img/c6060-1.jpg",value:"high",action:()=>{answer("budget","high","budget.high");showResult(pickClock());}},
+      {key:"budget.low",hint:"budget.lowh",img:"img/clround-1.jpg",value:"low",action:()=>{answer("budget","low","budget.low");showResult(pickClock());}},
+      {key:"budget.mid",hint:"budget.midh",img:"img/cl50-1.jpg",value:"mid",action:()=>{answer("budget","mid","budget.mid");showResult(pickClock());}},
+      {key:"budget.high",hint:"budget.highh",img:"img/cl60-1.jpg",value:"high",action:()=>{answer("budget","high","budget.high");showResult(pickClock());}},
       {key:"budget.any",hint:"budget.anyh",icon:"♡",value:"any",action:()=>{answer("budget","any","budget.any");showResult(pickClock());}}
     ],clockPhotos);
   }
 
   function pickClock(){
-    if(state.budget==="high") return state.photos==="one" ? "cl6080" : "cl60";
+    if(state.budget==="high") return state.photos==="one" ? "cl6080" : "cl60sq";
     if(state.budget==="mid") return state.photos==="many" ? "clcal4060" : "cldigi";
     if(state.budget==="low") return state.photos==="many" ? "cl20" : "clA4";
     return state.photos==="many" ? "cl50" : "clround";
@@ -253,7 +254,7 @@
   function occasion(){
     renderQuestion(2,"gift.2","gift.2h",[
       {key:"gift.birthday",hint:"gift.birthdayh",img:"img/mug250-1.jpg",value:"birthday",action:()=>{answer("occasion","birthday","gift.birthday");giftBudget();}},
-      {key:"gift.family",hint:"gift.familyh",img:"img/c5050-1.jpg",value:"family",action:()=>{answer("occasion","family","gift.family");giftBudget();}},
+      {key:"gift.family",hint:"gift.familyh",img:"img/cl50-1.jpg",value:"family",action:()=>{answer("occasion","family","gift.family");giftBudget();}},
       {key:"gift.business",hint:"gift.businessh",icon:"👕",value:"business",action:()=>{answer("occasion","business","gift.business");giftBudget();}},
       {key:"gift.other",hint:"gift.otherh",icon:"♡",value:"other",action:()=>{answer("occasion","other","gift.other");giftBudget();}}
     ],start);
@@ -262,7 +263,7 @@
   function giftBudget(){
     renderQuestion(3,"clock.3","clock.3h",[
       {key:"budget.low",hint:"budget.lowh",img:"img/mug250-1.jpg",value:"low",action:()=>{answer("budget","low","budget.low");showResult(state.occasion==="business"?"shirt":"mug250");}},
-      {key:"budget.mid",hint:"budget.midh",img:"img/c5050-1.jpg",value:"mid",action:()=>{answer("budget","mid","budget.mid");showResult(state.occasion==="business"?"shirt":state.occasion==="family"?"frame6080":"cl50");}},
+      {key:"budget.mid",hint:"budget.midh",img:"img/cl50-1.jpg",value:"mid",action:()=>{answer("budget","mid","budget.mid");showResult(state.occasion==="business"?"shirt":state.occasion==="family"?"frame6080":"cl50");}},
       {key:"budget.high",hint:"budget.highh",img:"img/mug799-1.jpg",value:"high",action:()=>{answer("budget","high","budget.high");showResult(state.occasion==="family"?"cl60":"mug799");}},
       {key:"budget.any",hint:"budget.anyh",icon:"♡",value:"any",action:()=>{answer("budget","any","budget.any");showResult(state.occasion==="business"?"shirt":"cl50");}}
     ],occasion);
